@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="pop.css">
+    <script src="js.cookie.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="pop_box">
+        <input type="checkbox" id="checkbox_id">오늘 그만보기
+        <div class="pop_title">
+            팝업창
+        </div>
+    </div>
+    <div>
+        <p>aaaaaaaa</p>
+    </div>
+    <script>
+        $(function() {
+            Cookies.remove('pop_check')
+            if(Cookies.get('pop_check') != 'y') {
+                $('.pop_box').show();
+                $('.pop_box').removeClass('out').addClass('active');
+            }
+        })
+
+        $("#checkbox_id").click (function() {
+            // console.log($('input:checkbox[id="checkbox_id"]').is(":checked"));
+            if($('input:checkbox[id="checkbox_id"]').is(":checked")) {
+                // $('.pop_box').css('display', 'none');
+                $('.pop_box').removeClass('active').addClass('out');
+                Cookies.set('pop_check', 'y', { expires: 1 });
+            }
+        });
+    </script>
+    <script>
+    </script>
+</body>
+</html>
