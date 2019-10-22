@@ -1,0 +1,23 @@
+$color: green;
+$dark: darken($color, 10%);
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+
+
+.a{
+    button {
+        width: 150px;
+        background: $color;
+        
+        @include border-radius(10px);
+        
+        &:hover {
+            background: $dark;
+        }
+    }
+}

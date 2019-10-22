@@ -1,0 +1,10 @@
+.a button {
+  width: 150px;
+  background: green;
+  border-radius: 10px;
+}
+
+.a button:hover {
+  background: #004d00;
+}
+/*# sourceMappingURL=sass.css.map */
