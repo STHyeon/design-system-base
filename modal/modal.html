@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <button id="btn">버튼</button>
+
+
+    <div id="myModal" class="modal">
+        <div class="modal_content">
+            <span class="close">&times;</span>
+            <p>sdkifjajf/p>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+
+            var modal = $("#myModal");
+            var btn = $("#btn");
+            var span = $(".close");
+            
+            btn.click( function() {
+                $("body").css("background", "gray");
+                modal.css("display", "block");
+            });
+            
+            span.click(function() {
+                $("body").css("background", "#ffffff");
+                modal.css("display", "none");
+            });
+
+            //on = 동적 
+            $(document).on("click", function(e) {
+                if(modal.is(e.target)) { //true가 되는 이유가 width 100%, height 100% 이기 때문인 듯함
+                    $("body").css("background", "#ffffff");
+                    modal.css("display", "none");
+                }
+            })
+        });
+    </script>
+</body>
+</html>
