@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <link rel="stylesheet" href="responsiveslide.css">
+</head>
+<body>
+    <ul class="rslides">
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+    </ul>
+
+    <script>
+        //참고사이트
+        // http://responsiveslides.com/ 
+        $(function() {
+            $(".rslides").responsiveSlides({
+                auto: true,
+                speed: 500, //전환속도
+                timeout: 4000, //전환시간
+            });
+        });
+    </script>
+</body>
+</html>
