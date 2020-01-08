@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../common/css/reset.css" />
+        <link rel="stylesheet" href="./notify.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="error_button">오류 호출</button>
+
+        <div id="error" class="error error-top-right">
+            <a id="alert_close">x</a>
+            <div class="error-icon">
+                <div class="error-icon-inner">
+                    <img src="envelope.png" alt="message" />
+                </div>
+            </div>
+            <div class="error-text">
+                <h3>Error</h3>
+                <p>{error_message}</p>
+            </div>
+        </div>
+        <script src="alert.js"></script>
+    </body>
+</html>
