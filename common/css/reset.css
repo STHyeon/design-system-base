@@ -20,8 +20,6 @@ strong{font-weight: 400;}
 input, select, textarea{vertical-align: middle;}
 img, fieldset{border: 0;}
 img{font-size: 0; line-height: 0; vertical-align: top;}
-caption{visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
-legend, .blind{visibility: hidden; overflow: hidden; position: absolute; left: 0; top: 0; margin: 0; padding: 0  !important;  width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important;}
 label{cursor: pointer;}
 button{display: inline-block; margin: 0; padding: 0; border: 0; background: none; text-align: center; cursor: pointer; vertical-align: middle; letter-spacing: -0.025em;}
 button::-moz-focus-inner{margin: 0; padding: 0; border: 0;}
@@ -54,13 +52,15 @@ select::-ms-expand{display: none;}
 :-ms-input-placeholder{color: #999;}/* IE 10+ */
 :-moz-placeholder{color: #999;}/* Firefox 18- */
 textarea{padding: 10px 15px; height: 177px; resize: none; line-height: 1.7;}
-.scroll_off{position: fixed; overflow: hidden; height: 100%;}
 
 /* html5 reset */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
 
-/* clear */
+/* util */
+.scroll_off{position: fixed; overflow: hidden; height: 100%;}
 .clearfix::after{display: block; clear: both; content: ""; height: 0; visibility: hidden;} 
+caption{visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+legend, .blind{visibility: hidden; overflow: hidden; position: absolute; left: 0; top: 0; margin: 0; padding: 0  !important;  width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important;}
 
 /* display */
 .pc{display: block;}
