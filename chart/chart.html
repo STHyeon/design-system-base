@@ -13,7 +13,7 @@
         <h1>bar</h1>
         <canvas id="barCanvas" width="400" height="400"> </canvas>
         <h1>Line</h1>
-        <canvas id="lineCanvas" width="400" height="400"></canvas>
+        <canvas id="lineCanvas" width="900" height="300"></canvas>
         <h1>doughnut</h1>
         <canvas id="doughnutCanvas" width="400" height="400"></canvas>
         <script>
@@ -39,26 +39,37 @@
                         }
                     ]
                 },
-                options: { scales: { yAxes: [{ ticks: { beginAtZero: true } }] }, responsive: false }
+                options: {
+                    scales: { yAxes: [{ ticks: { beginAtZero: true } }] },
+                    responsive: false
+                }
             });
         </script>
         <script>
             var linectx = document.getElementById("lineCanvas");
             var chartData = {
-                labels: ["S", "M", "T", "W", "t", "f", "s"],
+                labels: ["19`01", "19`02", "19`03", "19`04", "19`05", "19`06", "19`07", "19`08", "19`09", "19`10", "19`11", "19`12"],
                 datasets: [
                     {
-                        label: "a",
-                        data: [11, 22, 33, 44, 12, 13, 111],
-                        backgroundColor: "#ffe6e6",
-                        borderColor: ["red", "blue", "yellow"]
+                        label: "a", //삭제되는 애
+                        data: [13293, 9696, 18222, 39098, 25389, 30206, 17271, 17692, 24722, 37202, 32426, 35234],
+                        backgroundColor: "transparent",
+                        borderColor: ["rgba(54, 162, 235, 0.2)"],
+                        borderWidth: 3,
+                        pointBackgroundColor: "rgba(54, 162, 235, 0.2)",
+                        lineTension: 0 // 직선을 원할 경우,
                     }
                 ]
             };
             var lineChart = new Chart(linectx, {
                 type: "line",
                 data: chartData,
-                options: { responsive: false }
+                options: {
+                    responsive: false,
+                    legend: { display: false }, //label 삭제
+                    tooltips: { mode: "index", intersect: false }, //라인에 hover시 값보이게
+                    hover: { mode: "index", intersect: false } //라인에 hover시 값보이게
+                }
             });
         </script>
         <script>
