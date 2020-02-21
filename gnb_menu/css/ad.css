@@ -1,0 +1,31 @@
+.ad-first { position: relative; }
+
+.ad-first .ad-first-left { float: left; position: relative; width: 50%; height: 540px; }
+
+.ad-first .ad-first-left .ad-store-link-button { position: absolute; bottom: 0; right: 240px; text-align: center; }
+
+.ad-first .ad-first-left .ad-store-link-button a { float: left; }
+
+.ad-first .ad-first-left .ad-store-link-button a div { width: 165px; height: 58px; }
+
+.ad-first .ad-first-left .ad-store-link-button a .android-link { background: #1c0883; color: #ffffff; }
+
+.ad-first .ad-first-left .ad-store-link-button a .store-link-common { line-height: 58px; }
+
+.ad-first .ad-first-left .ad-store-link-button a .store-link-common img { margin-right: 5px; vertical-align: middle; }
+
+.ad-first .ad-first-right { float: right; width: 50%; height: 540px; background: #1c0883; }
+
+.ad-first .ad-first-right .ad-image { position: absolute; top: 80px; right: 173px; }
+
+.ad-first .ad-first-center { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.ad-first .ad-first-center .ad-text { float: left; }
+
+.ad-first .ad-first-center .ad-text .ad-text-title { font-weight: bold; font-size: 38px; line-height: 1; color: #1c0883; }
+
+.ad-first .ad-first-center .ad-text .ad-text-sub-title { font-size: 14px; color: #666666; line-height: 1.5; }
+
+.ad-first .ad-first-center .ad-text .ad-text-sub-title:first-of-type { padding-top: 37px; }
+
+.ad-first .ad-first-center .ad-image { float: right; }

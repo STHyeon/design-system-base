@@ -1,0 +1,85 @@
+.ad-first {
+    position: relative;
+    .ad-first-left {
+        float: left;
+        position: relative;
+        width: 50%;
+        height: 540px;
+
+        .ad-store-link-button {
+            position: absolute;
+            bottom: 0;
+            right: 240px;
+            text-align: center;
+
+            a {
+                float: left;
+
+                div {
+                    width: 165px;
+                    height: 58px;
+                }
+
+                .android-link {
+                    background: #1c0883;
+                    color: #ffffff;
+                }
+
+                .store-link-common {
+                    // padding: 10px 0;
+                    line-height: 58px;
+
+                    img {
+                        margin-right: 5px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    .ad-first-right {
+        float: right;
+        width: 50%;
+        height: 540px;
+        background: #1c0883;
+
+        .ad-image {
+            position: absolute;
+            top: 80px;
+            right: 173px;
+        }
+    }
+
+    .ad-first-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .ad-text {
+            float: left;
+
+            .ad-text-title {
+                font-weight: bold;
+                font-size: 38px;
+                line-height: 1;
+                color: #1c0883;
+            }
+
+            .ad-text-sub-title {
+                font-size: 14px;
+                color: #666666;
+                line-height: 1.5;
+
+                &:first-of-type {
+                    padding-top: 37px;
+                }
+            }
+        }
+
+        .ad-image {
+            float: right;
+        }
+    }
+}
