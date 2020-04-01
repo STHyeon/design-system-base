@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <style>
+        .a1 { background: red;}
+        .a2 { background: blue;}
+        .a3 { background: green;}
+    </style>
+</head>
+<body>
+    <div class="your-class">
+        <div class="a1"><div class="loan_search_write_detail loan_search_common">
+            <select class="loan_search_select">
+                <option value="1">동</option>
+                <option value="1">101동</option>
+                <option value="1">102동</option>
+                <option value="1">103동</option>
+                <option value="1">104동</option>
+                <option value="1">105동</option>
+            </select>
+        </div></div>
+        <div class="a2">2</div>
+        <div class="a3">3</div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.your-class').slick({
+            // setting-name: setting-value
+          });
+        });
+      </script>
+</body>
+</html>
