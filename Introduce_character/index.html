@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="../common/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="../common/css/reset.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div class="box">
+            <div class="box01 clearfix">
+                <div class="person">1</div>
+                <div class="person">2</div>
+                <div class="person">3</div>
+                <div class="person">4</div>
+            </div>
+            <div class="explain">
+                <strong>이름</strong>
+                <span>부서</span>
+                섬ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ
+            </div>
+            <div class="box01 clearfix">
+                <div class="person">1</div>
+                <div class="person">2</div>
+                <div class="person">3</div>
+                <div class="person">4</div>
+            </div>
+            <div class="explain">
+                <strong>이름</strong>
+                <span>부서</span>
+                섬ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ
+            </div>
+        </div>
+        <script>
+            $(".person").on("click", function () {
+                var $neighbor = $(this).parent().next();
+                // if ($neighbor.css("display") == "none") {
+                $neighbor.fadeIn();
+                $neighbor.show();
+                // }
+            });
+        </script>
+        <div class="box hide">
+            <h1>유형2</h1>
+            <div class="box01 box02">
+                <div class="person">
+                    ba
+                    <div class="explain exp">
+                        aaafffffffff
+                    </div>
+                </div>
+                <div class="person">
+                    c
+                    <div class="explain exp">
+                        aaafffffffff
+                    </div>
+                </div>
+                <div class="person">
+                    c
+                    <div class="explain exp">
+                        aaafffffffff
+                    </div>
+                </div>
+                <div class="person">
+                    d
+                    <div class="explain exp">
+                        aaafffffffff
+                    </div>
+                </div>
+                <div class="person">
+                    f
+                    <div class="explain exp">
+                        aaafffffffff
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(".person").on("click", function () {
+                if ($(".exp").css("display") == "none") {
+                    $(".curtain").css("display", "block");
+                    $(this).children(".exp").css("display", "block");
+                    $(this).css("z-index", "9999");
+                }
+            });
+
+            $(".curtain").click(function () {
+                $(this).css("display", "none");
+                $(".exp").css({ display: "none" });
+                $(".person").css("z-index", "0");
+            });
+        </script>
+        <div class="curtain"></div>
+    </body>
+</html>
