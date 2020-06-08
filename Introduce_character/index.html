@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <script src="../common/js/jquery-3.3.1.min.js"></script>
+        <!-- <script src="../common/js/stocks.js"></script> -->
         <link rel="stylesheet" href="../common/css/reset.css" />
         <link rel="stylesheet" href="./index.css" />
     </head>
@@ -33,15 +34,7 @@
                 섬ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ
             </div>
         </div>
-        <script>
-            $(".person").on("click", function () {
-                var $neighbor = $(this).parent().next();
-                // if ($neighbor.css("display") == "none") {
-                $neighbor.fadeIn();
-                $neighbor.show();
-                // }
-            });
-        </script>
+
         <div class="box hide">
             <h1>유형2</h1>
             <div class="box01 box02">
@@ -77,7 +70,8 @@
                 </div>
             </div>
         </div>
-        <script>
+        <div class="curtain"></div>
+        <!-- <script>
             $(".person").on("click", function () {
                 if ($(".exp").css("display") == "none") {
                     $(".curtain").css("display", "block");
@@ -86,12 +80,28 @@
                 }
             });
 
-            $(".curtain").click(function () {
+            $(".curtain").on("click", function () {
                 $(this).css("display", "none");
                 $(".exp").css({ display: "none" });
                 $(".person").css("z-index", "0");
             });
+        </script> -->
+        <script>
+            $(".person").on("click", function () {
+                var $neighbor = $(this).parent().next();
+                if ($neighbor.css("display") == "none") {
+                    $(".curtain").css("display", "block");
+                    $($neighbor).css({ display: "block", "z-index": "9999", background: "#fff" });
+                    $(this).css("z-index", "9999");
+                }
+            });
+
+            $(".curtain").on("click", function () {
+                $(this).css("display", "none");
+                $(".explain").css({ display: "none", "z-index": "0" });
+                // $(".explain").hide();
+                $(".person").css("z-index", "0");
+            });
         </script>
-        <div class="curtain"></div>
     </body>
 </html>
