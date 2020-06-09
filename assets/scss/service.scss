@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "common/variables";
+@import "common/mixins";
+@import "common/placeholders";
+@import "common/base";
+// https://webclub.tistory.com/518 참고 사이트
+// 3중첩 넘어가지않게
+// 네이밍 _ (Underbar)로 사용하는 것을 권장
+
+.title {
+    @include border-radius(100px);
+    @include translate(-50%, -50%);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .ab {
+        color: red;
+    }
+}
+
+@include mobile {
+    .title {
+        color: red;
+    }
+}

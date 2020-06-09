@@ -1,0 +1,59 @@
+@charset "utf-8";
+// @import "./variables";
+/* _mixins.scss */
+// 크로스브라우징?
+
+// mixin과 extend의 차이
+// mixin은 인자값을 활용할 수 있는 점ㅇ을 기준으로 분리
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin translate($translate1, $translate2) {
+    -webkit-transform: translate($translate1, $translate2);
+    -moz-transform: translate($translate1, $translate2);
+    -ms-transform: translate($translate1, $translate2);
+    transform: translate($translate1, $translate2);
+}
+
+// 크로스브라우징
+@mixin ie9_to_10 {
+    @media screen and (min-width:0\0){
+        @content;
+    }
+}
+
+@mixin ie10_over {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+@mixin Safari {
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        @content;
+    }
+}
+
+// media query
+@mixin desktop {
+    @media only screen and (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+@mixin table {
+    @media only screen and (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: #{$breakpoint-l-mobile}) {
+        @content;
+    }
+}
