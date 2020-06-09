@@ -9,28 +9,29 @@ app.use(cors());
 
 var list = [
     {
+        // 남선
         url: "https://m.search.naver.com/search.naver?sm=top_sug.pre&fbm=1&acr=1&acq=%EB%82%A8%EC%84%A0&qdt=0&ie=utf8&query=%EB%82%A8%EC%84%A0%EC%95%8C%EB%AF%B8%EB%8A%84&where=m",
         money: "6,010",
     },
     {
+        // 타이거
         url: "https://m.search.naver.com/search.naver?ie=UTF-8&sm=whl_hty&query=tiger+%EC%9B%90%EC%9C%A0%EC%84%A0%EB%AC%BCenhanced(h)&where=m",
         money: "1,891",
     },
     {
-        url: "https://m.search.naver.com/search.naver?ie=UTF-8&sm=whl_hty&query=%EB%9D%BC%EC%98%A8%EC%8B%9C%ED%81%90%EC%96%B4&where=m",
-        money: "4,455",
-    },
-    {
+        // 대한
         url: "https://m.search.naver.com/search.naver?ie=UTF-8&sm=whl_hty&query=%EB%8C%80%EC%8B%A0%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0&where=m",
         money: "1,305",
     },
     {
+        // 스페코
         url: "https://m.search.naver.com/search.naver?ie=UTF-8&sm=whl_hty&query=%EC%8A%A4%ED%8E%98%EC%BD%94&where=m",
         money: "4,335",
     },
     {
-        url: "https://m.search.naver.com/search.naver?ie=UTF-8&sm=whl_hty&query=%ED%8C%8C%EC%84%B8%EC%BD%94&where=m",
-        money: "18,050",
+        // 대륙제관
+        url: "https://m.search.naver.com/search.naver?ie=UTF-8&sm=whl_hty&query=%EB%8C%80%EB%A5%99%EC%A0%9C%EA%B4%80&where=m",
+        money: "5,150",
     },
 ];
 
@@ -72,4 +73,6 @@ app.get("/", async (req, res) => {
     return res.json(data);
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log("open");
+});
