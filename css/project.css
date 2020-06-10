@@ -12,7 +12,7 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla,
 
 textarea, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] { -moz-appearance: none; -webkit-appearance: none; appearance: none; }
 
-.box_hover_line, .start2, .custom_modal .modal .modal_content { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.box_hover_line, .start2, .custom_modal .modal .modal_content, .click { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 /* _base.scss */
 html, body, pre { width: 100%; height: 100%; margin: 0; padding: 0; border: 0; font: 12px/13px "Nanum Gothic", "굴림", Gulim, Arial, Tahoma; -webkit-overflow-scrolling: touch; }
@@ -63,6 +63,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 .clearfix::after { display: block; clear: both; content: ""; height: 0; visibility: hidden; }
 
 .pointer { cursor: pointer; }
+
+.curtain { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; min-height: 100%; background-color: #000; opacity: 0.5; filter: alpha(opacity=70); z-index: 1; }
 
 .btn-disable { cursor: default; pointer-events: none; color: #c0c0c0; background-color: #ffffff; }
 
@@ -634,3 +636,19 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 .introduce_character .explain { display: none; }
 
 .introduce_character .exp { display: none; position: absolute; top: 0; left: 300px; z-index: 99; width: 600px; height: 295px; background: yellow; }
+
+.click { border: 5px solid #4ac0ee; -webkit-transition: all, 0.25s, 0.25s ease-in; transition: all, 0.25s, 0.25s ease-in; z-index: 2; padding: 20px 30px; font-weight: bold; background: #ffffff; color: #4ac0ee; text-transform: uppercase; }
+
+.click::after, .click::before { -webkit-transition: all 0.25s ease-in; transition: all 0.25s ease-in; position: absolute; top: 100%; left: 0; bottom: -10px; content: ''; z-index: 1; width: 100%; max-width: 100%; }
+
+.click::before { top: 10px; left: -15px; width: 15px; height: 100%; background: #4ac0ee; }
+
+.click::after { right: 0; left: -15px; height: 15px; background: #4ac0ee; }
+
+.click:hover { margin: 0 0 -7.5px -7.5px; color: #fff; background: #4ac0ee; }
+
+.click:hover::after, .click:hover::before { top: 100%; left: 0; bottom: 0; }
+
+.click:hover::before { top: 0; left: 0; width: 0; }
+
+.click:hover::after { right: 0; left: 0; height: 0; }
