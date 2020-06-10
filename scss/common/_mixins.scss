@@ -169,6 +169,20 @@
     }
 }
 
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  
+    @keyframes #{$name} {
+      @content;
+    }
+}
+
 // 크로스브라우징
 @mixin ie9_to_10 {
     @media screen and (min-width:0\0){
@@ -204,5 +218,12 @@
 @mixin mobile {
     @media only screen and (max-width: #{$breakpoint-l-mobile}) {
         @content;
+    }
+}
+
+// breakpoint 외 media query
+@mixin media($width) {
+    @media only screen and (max-width: $width) {
+      @content;
     }
 }
