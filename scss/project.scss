@@ -709,3 +709,71 @@
         background: yellow;
     }
 } 
+
+// click
+.click {
+    @extend %position_center;
+    @include border-solid(5, #4ac0ee);
+    @include transition(all, .25s, .25s ease-in);
+
+    z-index: 2;
+    padding: 20px 30px;
+    font-weight: bold;
+    background: #ffffff;
+    color: #4ac0ee;
+    text-transform: uppercase;
+
+    &::after,
+    &::before {
+        @include transition(all .25s ease-in);
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        bottom: -10px;
+        content: '';
+        z-index: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &::before {
+        top: 10px;
+        left: -15px;
+        width: 15px;
+        height: 100%;
+        background: #4ac0ee;
+    }
+
+    &::after {
+        right: 0;
+        left: -15px;
+        height: 15px;
+        background: #4ac0ee;
+    }
+
+    &:hover {
+        margin: 0 0 -7.5px -7.5px;
+        color: #fff;
+        background: #4ac0ee;
+
+        &::after,
+        &::before {
+            top: 100%;
+            left: 0;
+            bottom: 0;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            width: 0;
+        }
+
+        &::after {
+            right: 0;
+            left: 0;
+            height: 0;
+        }
+    }
+}
