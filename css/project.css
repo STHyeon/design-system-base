@@ -625,18 +625,6 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 @keyframes symbol-middle { 0% { height: 0%; }
   100% { height: 100%; } }
 
-.introduce_character .box .box01 { text-align: center; }
-
-.introduce_character .box .box01 .person { float: left; position: relative; width: 25%; padding: 10px; border: 1px solid black; cursor: pointer; background: #fff; }
-
-.introduce_character .box .box02 .person { height: 295px; }
-
-.introduce_character .box .box02 .person:nth-child(3n) .exp, .introduce_character .box .box02 .person:nth-child(4n) .exp { left: -600px; }
-
-.introduce_character .explain { display: none; }
-
-.introduce_character .exp { display: none; position: absolute; top: 0; left: 300px; z-index: 99; width: 600px; height: 295px; background: yellow; }
-
 .click { border: 5px solid #4ac0ee; -webkit-transition: all, 0.25s, 0.25s ease-in; transition: all, 0.25s, 0.25s ease-in; z-index: 2; padding: 20px 30px; font-weight: bold; background: #ffffff; color: #4ac0ee; text-transform: uppercase; }
 
 .click::after, .click::before { -webkit-transition: all 0.25s ease-in; transition: all 0.25s ease-in; position: absolute; top: 100%; left: 0; bottom: -10px; content: ''; z-index: 1; width: 100%; max-width: 100%; }
