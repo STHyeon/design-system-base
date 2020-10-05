@@ -10,7 +10,7 @@ https://kenwheeler.github.io/slick/
 # fullpage (풀페이지)
 https://alvarotrigo.com/fullPage/ko/#page1
 
-# css 호환성
+# css 호환성 체크
 https://caniuse.com/ 
 
 # 그라데이션 설정
