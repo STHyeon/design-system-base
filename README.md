@@ -33,13 +33,10 @@ https://www.youtube.com/channel/UCTI6h7Vb05Td63qHQ3wjySQ/featured
 https://notefolio.net/?work_categories=E7&order=noted&from=all&q=%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4
 
 # 가로정렬 방법
-1. display: inline-block; margin-right: -4px; (비추)
-<br />
-  1.1
-  parent<br />
-  font-size: 0; line-height: 0;<br />
-  child<br />
-  display: inline-block;
+1. display: inline-block; margin-right: -4px; (비추)  
+  1.1 대체방법  
+  1.2 parent: font-size: 0; line-height: 0;  
+  1.3 child: display: inline-block;  
 
 2. display: flex;
 
