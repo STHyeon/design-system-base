@@ -31,3 +31,15 @@ https://www.youtube.com/channel/UCTI6h7Vb05Td63qHQ3wjySQ/featured
 
 # 포트폴리오
 https://notefolio.net/?work_categories=E7&order=noted&from=all&q=%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4
+
+# 가로정렬 방법
+1. display: inline-block; margin-right: -4px; (비추)
+1-1
+parent
+font-size: 0; line-height: 0;
+child
+display: inline-block;
+
+2. display: flex;
+
+3. flex: left; ::after{display:block; content:""; clear:both;}
