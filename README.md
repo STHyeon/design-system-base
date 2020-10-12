@@ -36,9 +36,9 @@ https://notefolio.net/?work_categories=E7&order=noted&from=all&q=%ED%8F%AC%ED%8A
 1. display: inline-block; margin-right: -4px; (비추)
 <br />
 1-1
-parent
-font-size: 0; line-height: 0;
-child
+parent<br />
+font-size: 0; line-height: 0;<br />
+child<br />
 display: inline-block;
 
 2. display: flex;
