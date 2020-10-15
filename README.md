@@ -41,3 +41,7 @@ https://notefolio.net/?work_categories=E7&order=noted&from=all&q=%ED%8F%AC%ED%8A
 2. display: flex;
 
 3. flex: left; ::after{display:block; content:""; clear:both;}
+
+# IE 작업시 팁
+1. IE에서 javascript 파일을 작성시 줄바꿈하면 구문 오류 발생
+2. IE 10이하에서 const 사용시 구문 오류 발생
