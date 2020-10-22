@@ -1,106 +1,83 @@
 @charset "UTF-8";
-@import url(c:\Users\user\Desktop\animation\scss\lib\slick.css);
+@import url(c:\Users\user\Desktop\새 폴더 (2)\Web-Publishing-Related\scss\lib\slick.css);
 /* _variables.scss */
 /* _mixins.scss */
 /* _placeholders.scss */
 @import url("https://fonts.googleapis.com/css?family=Lobster+Two");
-html, body, pre { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, body, input, textarea, select, button, table, li, dd, p, b, span, em, strong { -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust: none; }
 
-*, textarea, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] { -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
+* { -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
 
-pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ word-wrap: break-word; /* Internet Explorer 5.5+ */ }
-
-textarea, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] { -moz-appearance: none; -webkit-appearance: none; appearance: none; }
+select { -moz-appearance: none; -webkit-appearance: none; appearance: none; }
 
 .box_hover_line, .start2, .custom_modal .modal .modal_content, .click { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 /* _base.scss */
-html, body, pre { width: 100%; height: 100%; margin: 0; padding: 0; border: 0; font: 12px/13px "Nanum Gothic", "굴림", Gulim, Arial, Tahoma; -webkit-overflow-scrolling: touch; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
 
-/* remember to define focus styles! */
-/* tag */
-*:focus { outline: 0; }
+html, body { width: 100%; height: 100%; }
 
-body { overflow-y: scroll; }
+html { font-weight: 400; font-size: 16px; font-family: "Nanum Gothic", sans-serif; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+address, caption, cite, code, dfn, em, th, var, i { font-style: normal; }
 
-a, img { border: none; }
+dd, dl, dt, ul, ol, li { list-style: none; }
 
-ol, ul { list-style: none; margin: 0; padding: 0; border: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; font-size: 1rem; }
 
-a:link, a:hover, a:active { color: inherit; text-decoration: none; }
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
 
-img { display: block; }
-
-textarea { border-radius: 0px; width: 100%; height: 44px; margin: 0; padding: 0 15px; background-color: #fff; border: 1px solid #dddfe1; font-weight: 300; font-size: 0.9375rem; letter-spacing: -0.025em; }
-
-input { border-radius: 0px; }
-
-input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] { width: 100%; height: 44px; margin: 0; padding: 0 15px; background-color: #fff; border: 1px solid #dddfe1; font-weight: 300; font-size: 0.9375rem; letter-spacing: -0.025em; }
-
-input[type="button"] { width: 100%; margin: 1px 0px; }
-
-::-webkit-input-placeholder { font-size: 0.9375rem; color: #999; }
-
-/* Chrome/Opera/Safari */
-::-moz-placeholder { color: #999; }
-
-/* Firefox 19+ */
-:-ms-input-placeholder { color: #999; }
-
-/* IE 10+ */
-:-moz-placeholder { color: #999; }
-
-/* Firefox 18- */
-table { border-collapse: collapse; border-spacing: 0; }
-
-/* tools */
-.inner { max-width: 1180px; width: 100%; margin: 0 auto; }
-
-.btn { border-radius: 4px; background-color: #f5f5f5; background-image: -moz-linear-gradient(center top, #ffffff, #e6e6e6); background-repeat: repeat-x; border-color: #e6e6e6 #e6e6e6 #b3b3b3; -o-border-image: none; border-image: none; border-style: solid; border-width: 1px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); color: #333333; cursor: pointer; display: inline-block; font-size: 13px; line-height: 18px; margin-bottom: 0; padding: 4px 10px; text-align: center; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; }
-
-.clearfix::after { display: block; clear: both; content: ""; height: 0; visibility: hidden; }
-
-.pointer { cursor: pointer; }
-
-.curtain { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; min-height: 100%; background-color: #000; opacity: 0.5; filter: alpha(opacity=70); z-index: 1; }
-
-.btn-disable { cursor: default; pointer-events: none; color: #c0c0c0; background-color: #ffffff; }
+table, caption, th, td { border: 0; font-weight: 400; }
 
 caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0; }
 
-.pc { display: block; }
+td { word-break: break-all; }
 
-.mobile { display: none; }
+fieldset, iframe, img { border: 0; }
+
+legend { display: block; width: 100%; border: 0; }
+
+button, input, textarea { width: 100%; height: 44px; padding: 5px 16px; border: 1px solid #dddfe1; border-radius: 0; font-family: "Nanum Gothic", sans-serif; line-height: 1; background: transparent; outline: none; }
+
+textarea { word-break: keep-all; word-wrap: break-word; }
+
+select { width: 100%; height: 44px; padding: 5px 16px; font-family: "Nanum Gothic", sans-serif; font-weight: 300; font-size: 0.9375rem; color: #000; outline: none; }
+
+button { width: auto; height: auto; padding: 6px 12px; cursor: pointer; }
+
+pre { font-family: "Nanum Gothic", sans-serif; white-space: pre-wrap; word-wrap: break-word; }
+
+a { color: inherit; text-decoration: none; }
+
+a:link, a:hover, a:active { color: inherit; text-decoration: none; }
+
+strong { font-weight: 400; }
+
+/* _common.scss */
+/* display */
+.blind { visibility: hidden; overflow: hidden; position: absolute; left: 0; top: 0; margin: 0; padding: 0  !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; }
+
+.pc { display: block !important; }
+
+.mobile { display: none !important; }
 
 .show { display: block !important; }
 
 .hide { display: none !important; }
 
-.text-overflow1 { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+/* clear */
+.clearfix::after { display: block; clear: both; content: ""; height: 0; visibility: hidden; }
 
-.text-overflow2 { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+/* 줄처리 */
+.txt_over { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
-.w10 { width: 10 + "%" !important; }
+.txt_over_many { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 
-.w20 { width: 20 + "%" !important; }
+/* 영역 */
+.inner { height: 100%; padding: 0 16px; }
 
-.w30 { width: 30 + "%" !important; }
-
-.w40 { width: 40 + "%" !important; }
-
-.w50 { width: 50 + "%" !important; }
-
-.w60 { width: 60 + "%" !important; }
-
-.w70 { width: 70 + "%" !important; }
-
-.w80 { width: 80 + "%" !important; }
-
-.w90 { width: 90 + "%" !important; }
-
-.w100 { width: 100 + "%" !important; }
+/* font */
+.underline { text-decoration: underline !important; text-underline-position: under; }
 
 .w10 { width: 10px !important; }
 
@@ -402,14 +379,306 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .w1500 { width: 1500px !important; }
 
-.center { text-align: center; }
+.h10 { height: 10px !important; }
 
-.right { text-align: right; }
+.h20 { height: 20px !important; }
 
-.left { text-align: left; }
+.h30 { height: 30px !important; }
 
-@media only screen and (max-width: 767px) { .pc { display: none !important; }
-  .mobile { display: block !important; } }
+.h40 { height: 40px !important; }
+
+.h50 { height: 50px !important; }
+
+.h60 { height: 60px !important; }
+
+.h70 { height: 70px !important; }
+
+.h80 { height: 80px !important; }
+
+.h90 { height: 90px !important; }
+
+.h100 { height: 100px !important; }
+
+.h110 { height: 110px !important; }
+
+.h120 { height: 120px !important; }
+
+.h130 { height: 130px !important; }
+
+.h140 { height: 140px !important; }
+
+.h150 { height: 150px !important; }
+
+.h160 { height: 160px !important; }
+
+.h170 { height: 170px !important; }
+
+.h180 { height: 180px !important; }
+
+.h190 { height: 190px !important; }
+
+.h200 { height: 200px !important; }
+
+.h210 { height: 210px !important; }
+
+.h220 { height: 220px !important; }
+
+.h230 { height: 230px !important; }
+
+.h240 { height: 240px !important; }
+
+.h250 { height: 250px !important; }
+
+.h260 { height: 260px !important; }
+
+.h270 { height: 270px !important; }
+
+.h280 { height: 280px !important; }
+
+.h290 { height: 290px !important; }
+
+.h300 { height: 300px !important; }
+
+.h310 { height: 310px !important; }
+
+.h320 { height: 320px !important; }
+
+.h330 { height: 330px !important; }
+
+.h340 { height: 340px !important; }
+
+.h350 { height: 350px !important; }
+
+.h360 { height: 360px !important; }
+
+.h370 { height: 370px !important; }
+
+.h380 { height: 380px !important; }
+
+.h390 { height: 390px !important; }
+
+.h400 { height: 400px !important; }
+
+.h410 { height: 410px !important; }
+
+.h420 { height: 420px !important; }
+
+.h430 { height: 430px !important; }
+
+.h440 { height: 440px !important; }
+
+.h450 { height: 450px !important; }
+
+.h460 { height: 460px !important; }
+
+.h470 { height: 470px !important; }
+
+.h480 { height: 480px !important; }
+
+.h490 { height: 490px !important; }
+
+.h500 { height: 500px !important; }
+
+.h510 { height: 510px !important; }
+
+.h520 { height: 520px !important; }
+
+.h530 { height: 530px !important; }
+
+.h540 { height: 540px !important; }
+
+.h550 { height: 550px !important; }
+
+.h560 { height: 560px !important; }
+
+.h570 { height: 570px !important; }
+
+.h580 { height: 580px !important; }
+
+.h590 { height: 590px !important; }
+
+.h600 { height: 600px !important; }
+
+.h610 { height: 610px !important; }
+
+.h620 { height: 620px !important; }
+
+.h630 { height: 630px !important; }
+
+.h640 { height: 640px !important; }
+
+.h650 { height: 650px !important; }
+
+.h660 { height: 660px !important; }
+
+.h670 { height: 670px !important; }
+
+.h680 { height: 680px !important; }
+
+.h690 { height: 690px !important; }
+
+.h700 { height: 700px !important; }
+
+.h710 { height: 710px !important; }
+
+.h720 { height: 720px !important; }
+
+.h730 { height: 730px !important; }
+
+.h740 { height: 740px !important; }
+
+.h750 { height: 750px !important; }
+
+.h760 { height: 760px !important; }
+
+.h770 { height: 770px !important; }
+
+.h780 { height: 780px !important; }
+
+.h790 { height: 790px !important; }
+
+.h800 { height: 800px !important; }
+
+.h810 { height: 810px !important; }
+
+.h820 { height: 820px !important; }
+
+.h830 { height: 830px !important; }
+
+.h840 { height: 840px !important; }
+
+.h850 { height: 850px !important; }
+
+.h860 { height: 860px !important; }
+
+.h870 { height: 870px !important; }
+
+.h880 { height: 880px !important; }
+
+.h890 { height: 890px !important; }
+
+.h900 { height: 900px !important; }
+
+.h910 { height: 910px !important; }
+
+.h920 { height: 920px !important; }
+
+.h930 { height: 930px !important; }
+
+.h940 { height: 940px !important; }
+
+.h950 { height: 950px !important; }
+
+.h960 { height: 960px !important; }
+
+.h970 { height: 970px !important; }
+
+.h980 { height: 980px !important; }
+
+.h990 { height: 990px !important; }
+
+.h1000 { height: 1000px !important; }
+
+.txt_center { text-align: center !important; }
+
+.txt_right { text-align: right !important; }
+
+.txt_left { text-align: left !important; }
+
+/* select_text-align */
+.sel_txt_center { text-align-last: center !important; }
+
+.sel_txt_right { text-align-last: right !important; }
+
+.sel_txt_left { text-align-last: left !important; }
+
+/* popup */
+.popup { display: none; position: fixed; top: 0; left: 0; z-index: 1010; width: 100%; height: 100%; }
+
+.popup .popup_wrap { -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); position: absolute; top: 50%; left: 50%; max-width: 1180px; width: 90%; background: #ffffff; }
+
+.popup .popup_wrap .popup_title { padding: 5px 8px; border-bottom: 2px solid #e3e3e3; }
+
+.popup .popup_wrap .popup_contents { padding: 5px 8px; }
+
+.popup .popup_wrap .popup_footer { padding: 5px 8px; }
+
+.popup .popup_wrap .popup_close { position: absolute; top: 5px; right: 8px; cursor: pointer; }
+
+/* table */
+.wrap .tbl { border-top: 1px solid #e3e3e3; border-right: 1px solid #e3e3e3; table-layout: fixed; background: #f7f7f7; }
+
+.wrap .tbl thead th, .wrap .tbl tbody th, .wrap .tbl tbody td { border-left: 1px solid #e3e3e3; border-bottom: 1px solid #e3e3e3; }
+
+/* paging */
+.wrap .paging { padding: 60px 0 0; text-align: center; }
+
+.wrap .paging .paging_box a { display: inline-block; width: 50px; padding: 10px; border: 1px solid #e3e3e3; color: #898989; }
+
+.wrap .paging .paging_box .atv { border-color: #000000; color: #000000; }
+
+.wrap .paging .paging_box img { vertical-align: bottom; }
+
+@media only screen and (max-width: 1180px) { .inner { width: 100%; } }
+
+@media only screen and (max-width: 767px) { /* display */
+  .pc { display: none !important; }
+  .mobile { display: block !important; }
+  /* paging */
+  .wrap .paging { font-size: 13px; }
+  .wrap .paging .paging_box { width: auto; padding: 0; border: 0; }
+  .wrap .paging .paging_box span { padding: 5px; color: #898989; }
+  .wrap .paging .paging_box img { width: 10px; height: 11px; vertical-align: baseline; }
+  .wrap .paging .paging_box .atv { color: #000000; }
+  .wrap .paging .paging_box .btn { padding: 6px 11px; border: 1px solid #e3e3e3; }
+  .wrap .paging .paging_box .prev { margin: 0 10px 0 0; }
+  .wrap .paging .paging_box .next { margin: 0 0 0 10px; } }
+
+/* -------- TAB -------- */
+/**
+    type01: active 했을 경우, bootstrap_menu
+    type02: active, hover 했을 경우, border 선이 항목별 끝까지 직선으로 그어짐
+    type03: active, hover 했을 경우, border 선이 항목별 끝까지 box형으로 그어짐
+*/
+.tab .type01 { border-bottom: 1px solid #dddddd; }
+
+.tab .type01 ul > li { float: left; margin-bottom: -1px; }
+
+.tab .type01 ul > li span { display: block; position: relative; padding: 10px 15px; cursor: pointer; }
+
+.tab .type01 ul > li.active span { border: 1px solid #dddddd; border-bottom-color: transparent; background: #ffffff; }
+
+.tab .type02 ul li { float: left; position: relative; width: 25%; height: 40px; line-height: 40px; text-align: center; cursor: pointer; }
+
+.tab .type02 ul li::after { display: block; position: absolute; top: 0; bottom: 0; z-index: 1; content: ""; border-right: 1px solid #ddd; }
+
+.tab .type02 ul li:last-child span { border-right: 1px solid #ddd; }
+
+.tab .type02 ul li.active::before { display: block; position: absolute; left: 0; right: -1px; z-index: 2; content: ""; border-top: 2px solid red; }
+
+.tab .type02 ul li.active:last-child::before { right: 0; }
+
+.tab .type02 ul li.active span { color: red; }
+
+.tab .type02 ul li.active span::after { display: block; position: absolute; left: 1px; right: 0; bottom: -1px; content: ""; border-bottom: 1px solid #fff; }
+
+.tab .type02 ul li span { display: block; position: relative; height: 100%; margin: 0 0 -1px; border: 1px solid #ddd; border-left: 0; border-right: 0; }
+
+.tab .type03 ul li { float: left; position: relative; width: calc(25% + 1px); height: 40px; margin: 0 0 0 -1px; line-height: 40px; text-align: center; cursor: pointer; }
+
+.tab .type03 ul li::after { display: block; position: absolute; top: 10px; bottom: 10px; z-index: 1; content: ""; border-right: 1px solid #ddd; }
+
+.tab .type03 ul li:first-child span { border-left: 1px solid #ddd; }
+
+.tab .type03 ul li:last-child span { border-right: 1px solid #ddd; }
+
+.tab .type03 ul li.active span { z-index: 3; border: 1px solid red; border-top-width: 2px; border-bottom: 0; color: red; }
+
+.tab .type03 ul li.active span::after { display: block; position: absolute; left: 1px; right: 0; content: ""; border-bottom: 1px solid #fff; }
+
+.tab .type03 ul li span { display: block; position: relative; height: 100%; margin: 0 0 -1px; border: 1px solid #ddd; border-left: 0; border-right: 0; }
+
+.text_justify .type { text-align-last: justify; }
 
 .horizon { overflow: auto; background: #333333; white-space: nowrap; }
 
@@ -459,7 +728,7 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .start1 { display: -webkit-box; display: -ms-flexbox; display: flex; overflow: hidden; position: relative; z-index: 0; min-height: 100vh; background: #ededed; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.start1 h1 { font-family: 'Lobster Two', cursive; font-size: 5rem; text-shadow: 0px 1px 0px white; color: #343434; -webkit-animation: Hello 3s ease; animation: Hello 3s ease; }
+.start1 h1 { font-family: "Lobster Two", cursive; font-size: 5rem; text-shadow: 0px 1px 0px white; color: #343434; -webkit-animation: Hello 3s ease; animation: Hello 3s ease; }
 
 .start1 .pulse { z-index: -1; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 30rem; }
 
@@ -521,9 +790,9 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .one_day_popup { position: absolute; width: 100vw; height: 100vh; z-index: 9999; background: url(../img/1day/1.png) no-repeat; padding: 180px 30px; display: none; }
 
-.one_day_popup.active { -webkit-animation: scale-display .3s; animation: scale-display .3s; display: block; }
+.one_day_popup.active { -webkit-animation: scale-display 0.3s; animation: scale-display 0.3s; display: block; }
 
-.one_day_popup.out { -webkit-animation: scale-display--reversed .3s; animation: scale-display--reversed .3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; display: block; }
+.one_day_popup.out { -webkit-animation: scale-display--reversed 0.3s; animation: scale-display--reversed 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; display: block; }
 
 .one_day_popup .pop_title { font-size: 40px; font-weight: bold; text-align: center; }
 
@@ -607,11 +876,11 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .nexflex .logged-out .symbol-mask { overflow: hidden; position: absolute; width: 100%; }
 
-.nexflex .logged-out .symbol-left { top: 100%; left: 0; width: 36%; height: 100%; background: #af1f1f; /* animation-timing-function: linear; */ -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-name: symbol-side; animation-name: symbol-side; /* 애니메이션 이름 */ -webkit-animation-duration: .75s; animation-duration: .75s; /* 몇 초안에 일어날지 */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; /*반복횟수*/ /* animation-direction:alternate; 종료 후 다시 처음부터 시작할지 역방향으로 진행할지 결정  == 방향 지정 */ -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; /* 애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정 */ -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* animation-timing-function:cubic-bezier(0, 1, 0.5, 1); */ }
+.nexflex .logged-out .symbol-left { top: 100%; left: 0; width: 36%; height: 100%; background: #af1f1f; /* animation-timing-function: linear; */ -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-name: symbol-side; animation-name: symbol-side; /* 애니메이션 이름 */ -webkit-animation-duration: 0.75s; animation-duration: 0.75s; /* 몇 초안에 일어날지 */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; /*반복횟수*/ /* animation-direction:alternate; 종료 후 다시 처음부터 시작할지 역방향으로 진행할지 결정  == 방향 지정 */ -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; /* 애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정 */ -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* animation-timing-function:cubic-bezier(0, 1, 0.5, 1); */ }
 
-.nexflex .logged-out .symbol-right { top: 100%; right: 0; width: 36%; height: 100%; background: #af1f1f; -webkit-animation-name: symbol-side; animation-name: symbol-side; -webkit-animation-duration: .75s; animation-duration: .75s; -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: .46s; animation-delay: .46s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+.nexflex .logged-out .symbol-right { top: 100%; right: 0; width: 36%; height: 100%; background: #af1f1f; -webkit-animation-name: symbol-side; animation-name: symbol-side; -webkit-animation-duration: 0.75s; animation-duration: 0.75s; -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 0.46s; animation-delay: 0.46s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
 
-.nexflex .logged-out .symbol-middle { width: 34%; /* height: 100vh; */ height: 0px; /* min-height: 100vh; */ left: 36%; /* transform: rotate(-19.5deg) scaleY(1.3); */ -webkit-transform: rotate(-19.5deg) scaleY(1.3); transform: rotate(-19.5deg) scaleY(1.3); /* transform-origin:left; */ background: #e50914; -webkit-animation-name: symbol-middle; animation-name: symbol-middle; -webkit-animation-duration: .15s; animation-duration: .15s; /* animation-direction: alternate; */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: .23s; animation-delay: .23s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+.nexflex .logged-out .symbol-middle { width: 34%; /* height: 100vh; */ height: 0px; /* min-height: 100vh; */ left: 36%; /* transform: rotate(-19.5deg) scaleY(1.3); */ -webkit-transform: rotate(-19.5deg) scaleY(1.3); transform: rotate(-19.5deg) scaleY(1.3); /* transform-origin:left; */ background: #e50914; -webkit-animation-name: symbol-middle; animation-name: symbol-middle; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; /* animation-direction: alternate; */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 0.23s; animation-delay: 0.23s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
 
 @-webkit-keyframes symbol-side { 0% { top: 100%; }
   100% { top: 0; } }
@@ -627,7 +896,7 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 
 .click { border: 5px solid #4ac0ee; -webkit-transition: all, 0.25s, 0.25s ease-in; transition: all, 0.25s, 0.25s ease-in; z-index: 2; padding: 20px 30px; font-weight: bold; background: #ffffff; color: #4ac0ee; text-transform: uppercase; }
 
-.click::after, .click::before { -webkit-transition: all 0.25s ease-in; transition: all 0.25s ease-in; position: absolute; top: 100%; left: 0; bottom: -10px; content: ''; z-index: 1; width: 100%; max-width: 100%; }
+.click::after, .click::before { -webkit-transition: all 0.25s ease-in; transition: all 0.25s ease-in; position: absolute; top: 100%; left: 0; bottom: -10px; content: ""; z-index: 1; width: 100%; max-width: 100%; }
 
 .click::before { top: 10px; left: -15px; width: 15px; height: 100%; background: #4ac0ee; }
 

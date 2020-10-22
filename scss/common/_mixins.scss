@@ -203,6 +203,12 @@
 }
 
 // media query
+@mixin base {
+    @media only screen and (max-width: #{$breakpoint-base}) {
+        @content;
+    }
+}
+
 @mixin table {
     @media only screen and (max-width: #{$breakpoint-tablet}) {
         @content;

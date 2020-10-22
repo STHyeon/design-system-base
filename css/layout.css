@@ -1,0 +1,15 @@
+.wrap {}
+
+.nav {position: fixed; top: 0; bottom: 0; width: 220px; padding: 10px; background: #451c1c;}
+.nav .box {margin: 0 0 20px;}
+.nav .box a {color: #ffffff;}
+.nav .box .title {margin: 0 0 5px; font-size: 25px;}
+.nav .box li {margin: 0 0 3px; text-decoration: underline; text-indent: 20px;}
+
+.section {width: 100%; padding: 50px 10px 50px 230px; background: #16193f;}
+.section .box {width: 100%; margin: 0 0 20px; padding: 10px 15px 40px; background: #ffffff;}
+.section .box .title {margin: 0 0 35px; font-size: 30px; text-decoration: underline;}
+.section .box .type {margin: 0 0 30px;}
+.section .box .type h2 {width: 100%; margin: 0 0 15px; padding: 0 0 5px; border-bottom: 2px solid rgb(153, 153, 153); font-size: 14px;}
+.section .box:last-child,
+.section .box .type:last-child {margin: 0;}
