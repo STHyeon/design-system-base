@@ -25,6 +25,16 @@
     border: $size+px solid $color;
 }
 
+@mixin font-face($name, $file, $weight:noraml, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url('../../fonts/#{$file}.woff') format('woff'),
+             url('../../fonts/#{$file}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
