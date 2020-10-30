@@ -1,6 +1,6 @@
 .wrap {}
 
-.nav {position: fixed; top: 0; bottom: 0; overflow: scroll; width: 260px; padding: 10px; background: #8e6646;}
+.nav {position: fixed; top: 0; bottom: 0; overflow: scroll; width: 260px; padding: 10px; background:#36302b;}
 .nav .box {margin: 0 0 20px;}
 .nav .box a {color: #ffffff;}
 .nav .box .title {margin: 0 0 5px; border-bottom: 2px solid #d2d2d2; font-size: 18px;}
@@ -8,7 +8,7 @@
 .nav .box li::before {position: absolute; left: 7px; top: 50%; content: ""; width: 4px; height: 4px; border-radius: 50%; background: #fff; transform: translateY(-50%);}
 .nav .box li:hover a {color: #ffd200}
 
-.section {width: 100%; padding: 50px 10px 50px 270px; background: #828282;}
+.section {width: 100%; padding: 50px 10px 50px 270px; background:#4a4e5b;}
 .section .box {width: 100%; margin: 0 0 20px; padding: 10px 15px 40px; background: #ffffff;}
 .section .box .title {margin: 0 0 35px; font-size: 30px; text-decoration: underline;}
 .section .box .help {margin: 10px 0; font-size: 13px; color: #828282;}
