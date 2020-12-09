@@ -21,14 +21,14 @@ function CreateNav() {
     $('#wrap').prepend(boxHTML);
 }
 
-function GrantToActive(currPos) {
+function GrantToActive(currPos, group) {
     $(currPos).on('click', function () {
         $('.' + group).removeClass('active');
         $(this).addClass('active');
     });
 }
 
-function ToggleToActive(currPos, group) {
+function ToggleToActive(currPos) {
     $(currPos).on('click', function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
