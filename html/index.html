@@ -17,7 +17,7 @@
     <body>
         <div id="wrap" class="wrap">
             <section class="section">
-                <!-- animation -->
+                <!-- Animation -->
                 <div id="Animation" class="box animation">
                     <div class="title">Animation</div>
                     <div class="info">
@@ -63,13 +63,7 @@
 
                             <!-- viewBox 0 0 1024 1024 -->
                             <!--         좌표 너비 높이   -->
-                            <svg
-                                class="pulse"
-                                viewBox="0 0 1024 1024"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
+                            <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <circle id="Oval" cx="512" cy="512" r="512"></circle>
                                 <circle id="Oval" cx="512" cy="512" r="512"></circle>
                                 <circle id="Oval" cx="512" cy="512" r="512"></circle>
@@ -87,9 +81,19 @@
                             <div class="title">WRITE ROAD</div>
                         </div>
                     </div>
+
+                    <div id="netflex_animation" class="type type06">
+                        <h2><span>type06</span> Netflex 애니메이션</h2>
+                        <a href="./netflex_N.html" target="_blank">넷플릭스 N 보러가기</a>
+                    </div>
+
+                    <div id="pageTransition_animation" class="type type07">
+                        <h2><span>type07</span> 페이지 전환 효과</h2>
+                        <a href="./pageTransition.html" target="_blank">페이지 전환 효과 보러가기</a>
+                    </div>
                 </div>
 
-                <!-- chart -->
+                <!-- Chart -->
                 <div id="Chart" class="box chart">
                     <div class="title">Chart</div>
                     <div class="info">
@@ -113,7 +117,7 @@
                     </div>
                 </div>
 
-                <!-- dropdown -->
+                <!-- Dropdown -->
                 <div id="Dropdown" class="box dropdown">
                     <div class="title">Dropdown</div>
                     <div id="toggle_dropdown" class="type type01 clearfix">
@@ -150,43 +154,7 @@
                     </div>
                 </div>
 
-                <!-- etc -->
-                <div id="Etc" class="box etc">
-                    <div class="title">Etc</div>
-                    <div id="popup" class="type type01">
-                        <h2><span>type01</span> 1일 팝업</h2>
-                        <a href="./1day_popup.html" target="_blank">1일 팝업 보러가기</a>
-                    </div>
-
-                    <div id="follow_menu" class="type type02">
-                        <h2><span>type02</span> Follow 메뉴</h2>
-                        <a href="./follow_menu.html" target="_blank">Follow 메뉴 보러가기</a>
-                    </div>
-
-                    <div id="netflex" class="type type03">
-                        <h2><span>type03</span> 넷플릭스 N</h2>
-                        <a href="./netflex_N.html" target="_blank">넷플릭스 N 보러가기</a>
-                    </div>
-
-                    <div id="masonry" class="type type04">
-                        <h2><span>type04</span> 불규칙 배열</h2>
-                        <a href="./masonry.html" target="_blank">불규칙 배열 보러가기</a>
-                    </div>
-
-                    <div id="pageTransition" class="type type05">
-                        <h2><span>type05</span> 페이지 전환 효과</h2>
-                        <a href="./pageTransition.html" target="_blank"
-                            >페이지 전환 효과 보러가기</a
-                        >
-                    </div>
-
-                    <div id="print" class="type type06">
-                        <h2><span>type06</span> 프린트용 페이지</h2>
-                        <a href="./print.html" target="_blank">프린트용 페이지 보러가기</a>
-                    </div>
-                </div>
-
-                <!-- image sprite -->
+                <!-- ImageSprite -->
                 <div id="Image_Sprite" class="box image_sprite">
                     <div class="title">Image</div>
                     <div class="info">
@@ -203,9 +171,9 @@
                     </div>
                 </div>
 
-                <!-- custom_checkback -->
+                <!-- CustomCheckback -->
                 <div id="Custom_Checkbox" class="box custom_checkbox">
-                    <div class="title">:Checkbox</div>
+                    <div class="title">Input[Checkbox]</div>
                     <div id="agree_checkbox" class="type type01">
                         <h2><span>type01</span> 배경수정 체크박스</h2>
                         <div class="sub_box">
@@ -230,33 +198,21 @@
                     </div>
                 </div>
 
-                <!-- custom_file -->
+                <!-- CustomFile -->
                 <div id="Custom_File" class="box custom_file">
-                    <div class="title">:File</div>
+                    <div class="title">Input[File]</div>
                     <div id="btn_file_1" class="type type01 file1 clearfix">
                         <h2><span>type01</span> 버튼 누르면 파일첨부</h2>
                         <div class="file_name_show disabled"></div>
                         <label for="file1" class="btn label">파일</label>
-                        <input
-                            type="file"
-                            name=""
-                            id="file1"
-                            class="blind"
-                            onchange="SetFileName(this)"
-                        />
+                        <input type="file" name="" id="file1" class="blind" onchange="SetFileName(this)" />
                     </div>
 
                     <label for="file2" id="btn_file_2" class="type type02 file2 clearfix">
                         <h2><span>type02</span> 어딜 눌러도 파일첨부</h2>
                         <div class="file_name_show disabled"></div>
                         <button class="btn">파일</button>
-                        <input
-                            type="file"
-                            name=""
-                            id="file2"
-                            class="blind"
-                            onchange="SetFileName(this)"
-                        />
+                        <input type="file" name="" id="file2" class="blind" onchange="SetFileName(this)" />
                     </label>
 
                     <div id="btn_file_3" class="file3 type type03">
@@ -264,13 +220,7 @@
                         <div class="clearfix">
                             <div class="file_name_show disabled"></div>
                             <label for="file3" class="btn">파일</label>
-                            <input
-                                type="file"
-                                name=""
-                                id="file3"
-                                class="blind"
-                                onchange="SetFileName(this)"
-                            />
+                            <input type="file" name="" id="file3" class="blind" onchange="SetFileName(this)" />
                         </div>
                         <div class="file_name_show"></div>
                     </div>
@@ -280,13 +230,7 @@
                         <div class="clearfix">
                             <div class="file_name_show disabled"></div>
                             <label for="file4" class="btn">파일</label>
-                            <input
-                                type="file"
-                                name=""
-                                id="file4"
-                                class="blind"
-                                onchange="SetFileName(this)"
-                            />
+                            <input type="file" name="" id="file4" class="blind" onchange="SetFileName(this)" />
                         </div>
                         <div class="txt_right file_name_show"></div>
                     </div>
@@ -296,13 +240,7 @@
                         <div class="clearfix">
                             <div class="file_name_show disabled"></div>
                             <label for="file5" class="btn">파일</label>
-                            <input
-                                type="file"
-                                name=""
-                                id="file5"
-                                class="blind"
-                                onchange="SetFileName(this)"
-                            />
+                            <input type="file" name="" id="file5" class="blind" onchange="SetFileName(this)" />
                         </div>
 
                         <div class="clearfix">
@@ -316,13 +254,7 @@
                         <div class="clearfix">
                             <div class="file_name_show disabled"></div>
                             <label for="file6" class="btn label">파일</label>
-                            <input
-                                type="file"
-                                name=""
-                                id="file6"
-                                class="blind"
-                                onchange="SetFileName(this)"
-                            />
+                            <input type="file" name="" id="file6" class="blind" onchange="SetFileName(this)" />
                         </div>
                         <div>
                             <button type="button" class="addBtn">+</button>
@@ -331,9 +263,9 @@
                     </div>
                 </div>
 
-                <!-- custom_radio -->
+                <!-- CustomRadio -->
                 <div id="Custom_Radio" class="box custom_radio">
-                    <div class="title">:Radio</div>
+                    <div class="title">Input[Radio]</div>
                     <div id="click_radio" class="type type01">
                         <h2><span>type01</span> 배경수정 라디오 버튼</h2>
                         <input type="radio" name="ra" id="ra1" class="blind" />
@@ -345,9 +277,9 @@
                     </div>
                 </div>
 
-                <!-- custom_select -->
+                <!-- CustomSelect -->
                 <div id="Custom_Select" class="box custom_select">
-                    <div class="title">:Select</div>
+                    <div class="title">Input[Select]</div>
                     <div class="info">
                         <div class="info_title">- 정보 -</div>
                         <ul>
@@ -362,23 +294,16 @@
                     </div>
                 </div>
 
-                <!-- custom_text -->
+                <!-- CustomText -->
                 <div id="Custom_Text" class="box custom_text">
-                    <div class="title">:Text</div>
+                    <div class="title">Input[Text]</div>
                     <div id="click_radio" class="type type01">
                         <h2><span>type01</span> 텍스트 마지막으로 이동</h2>
-                        <input
-                            type="tel"
-                            id="tfResidentNumber"
-                            class="tf_g account_input1"
-                            placeholder="숫자만 입력"
-                            maxlength="6"
-                            title="숫자"
-                        />
+                        <input type="tel" id="tfResidentNumber" class="tf_g account_input1" placeholder="숫자만 입력" maxlength="6" title="숫자" />
                     </div>
                 </div>
 
-                <!-- custom_scroll -->
+                <!-- CustomScroll -->
                 <div id="Custom_Scroll" class="box custom_scroll">
                     <div class="title">Scroll</div>
                     <div class="info">
@@ -411,16 +336,43 @@
                     <div id="custom_scrollbar" class="type type02">
                         <h2><span>type02</span> 스크롤바 커스텀</h2>
                         <div class="sub_box">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever
-                            since the 1500s, when an unknown printer took a galley of type and
-                            scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the 1960s with the release
-                            of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions
-                            of Lorem Ipsum.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         </div>
+                    </div>
+                </div>
+
+                <!-- Layout -->
+                <div id="Layout" class="box layout">
+                    <div class="title">Layout</div>
+                    <div id="masonry" class="type type01">
+                        <h2><span>type01</span> 불규칙 배열</h2>
+                        <a href="./masonry.html" target="_blank">불규칙 배열 보러가기</a>
+                    </div>
+
+                    <div id="print" class="type type02">
+                        <h2><span>type02</span> 프린트용 페이지</h2>
+                        <a href="./print.html" target="_blank">프린트용 페이지 보러가기</a>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div id="Menu" class="box menu">
+                    <div class="title">Menu</div>
+                    <div id="follow_menu" class="type type01">
+                        <h2><span>type01</span> Follow 메뉴</h2>
+                        <a href="./follow_menu.html" target="_blank">Follow 메뉴 보러가기</a>
+                    </div>
+                </div>
+
+                <!-- Popup -->
+                <div id="Popup" class="box pop">
+                    <div class="title">Popup</div>
+                    <div id="popup" class="type type01">
+                        <h2><span>type01</span> 1일 팝업</h2>
+                        <a href="./1day_popup.html" target="_blank">1일 팝업 보러가기</a>
                     </div>
                 </div>
 
@@ -477,7 +429,7 @@
                     </div>
                 </div>
 
-                <!-- Text-justify -->
+                <!-- TextJustify -->
                 <div id="Text_Justify" class="box text_justify">
                     <div class="title">Text_Justify</div>
                     <div class="info">
