@@ -3,10 +3,10 @@
 /* _variables.scss */
 /* _mixins.scss */
 /* _placeholders.scss */
-@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
 html, body, input, textarea, select, button, table, li, dd, p, b, span, em, strong { -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust: none; }
 
 * { -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
@@ -645,150 +645,42 @@ strong { font-weight: 400; }
   .wrap .paging .paging_box .prev { margin: 0 10px 0 0; }
   .wrap .paging .paging_box .next { margin: 0 0 0 10px; } }
 
-@font-face { font-family: "Wemakeprice"; src: url("../../fonts/Wemakeprice/Wemakeprice-Bold.woff") format("woff"), url("../../fonts/Wemakeprice/Wemakeprice-Bold.ttf") format("truetype"); font-weight: noraml; font-style: normal; }
+@-webkit-keyframes animStar { from { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
+  to { -webkit-transform: translateY(0px); transform: translateY(0px); } }
 
-.nav .box .title a { font-family: 'Wemakeprice'; }
+@keyframes animStar { from { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
+  to { -webkit-transform: translateY(0px); transform: translateY(0px); } }
 
-/* -------- TAB -------- */
-/**
-    type01: active 했을 경우, bootstrap_menu
-    type02: active, hover 했을 경우, border 선이 항목별 끝까지 직선으로 그어짐
-    type03: active, hover 했을 경우, border 선이 항목별 끝까지 box형으로 그어짐
-*/
-.tab .type01 { border-bottom: 1px solid #dddddd; }
+@-webkit-keyframes pulse { 25% { opacity: 0.4; }
+  100% { -webkit-transform: scale(1); transform: scale(1); } }
 
-.tab .type01 ul > li { float: left; margin-bottom: -1px; }
+@keyframes pulse { 25% { opacity: 0.4; }
+  100% { -webkit-transform: scale(1); transform: scale(1); } }
 
-.tab .type01 ul > li span { display: block; position: relative; padding: 10px 15px; cursor: pointer; }
+@-webkit-keyframes Hello { 0% { opacity: 0; }
+  66% { opacity: 0; }
+  96% { opacity: 0.4; }
+  100% { opacity: 1; } }
 
-.tab .type01 ul > li.active span { border: 1px solid #dddddd; border-bottom-color: transparent; background: #ffffff; }
+@keyframes Hello { 0% { opacity: 0; }
+  66% { opacity: 0; }
+  96% { opacity: 0.4; }
+  100% { opacity: 1; } }
 
-.tab .type02 ul li { float: left; position: relative; width: 25%; height: 40px; line-height: 40px; text-align: center; cursor: pointer; }
+@-webkit-keyframes show { 0% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; } }
 
-.tab .type02 ul li::after { display: block; position: absolute; top: 0; bottom: 0; z-index: 1; content: ''; border-right: 1px solid #ddd; }
+@keyframes show { 0% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; } }
 
-.tab .type02 ul li:last-child span { border-right: 1px solid #ddd; }
+@-webkit-keyframes drift { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
-.tab .type02 ul li.active::before { display: block; position: absolute; left: 0; right: -1px; z-index: 2; content: ''; border-top: 2px solid red; }
+@keyframes drift { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 
-.tab .type02 ul li.active:last-child::before { right: 0; }
-
-.tab .type02 ul li.active span { color: red; }
-
-.tab .type02 ul li.active span::after { display: block; position: absolute; left: 1px; right: 0; bottom: -1px; content: ''; border-bottom: 1px solid #fff; }
-
-.tab .type02 ul li span { display: block; position: relative; height: 100%; margin: 0 0 -1px; border: 1px solid #ddd; border-left: 0; border-right: 0; }
-
-.tab .type03 ul li { float: left; position: relative; width: calc(25% + 1px); height: 40px; margin: 0 0 0 -1px; line-height: 40px; text-align: center; cursor: pointer; }
-
-.tab .type03 ul li::after { display: block; position: absolute; top: 10px; bottom: 10px; z-index: 1; content: ''; border-right: 1px solid #ddd; }
-
-.tab .type03 ul li:first-child span { border-left: 1px solid #ddd; }
-
-.tab .type03 ul li:last-child span { border-right: 1px solid #ddd; }
-
-.tab .type03 ul li.active span { z-index: 3; border: 1px solid red; border-top-width: 2px; border-bottom: 0; color: red; }
-
-.tab .type03 ul li.active span::after { display: block; position: absolute; left: 1px; right: 0; content: ''; border-bottom: 1px solid #fff; }
-
-.tab .type03 ul li span { display: block; position: relative; height: 100%; margin: 0 0 -1px; border: 1px solid #ddd; border-left: 0; border-right: 0; }
-
-/* -------- Text_Justify -------- */
-/**
-    type01: 한글자씩 떨어짐
-    type02: 한태그씩 떨어짐
-    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
-*/
-.text_justify .type .justify { text-align: justify; text-align-last: justify; }
-
-/* -------- Custom_Checkbox -------- */
-/**
-    type01: check box - 백이미지 활용
-    type02: btn_checkbox
-    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
-*/
-.custom_checkbox .sub_box { margin: 0 0 5px; }
-
-.custom_checkbox .type01 { position: relative; }
-
-.custom_checkbox .type01 input[type='checkbox'] + label span { display: inline-block; width: 19px; height: 19px; margin: -2px 10px 0; vertical-align: middle; background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat; cursor: pointer; }
-
-.custom_checkbox .type01 input[type='checkbox']:checked + label span { background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat; }
-
-.custom_checkbox .type02 { position: relative; }
-
-.custom_checkbox .type02 input[type='checkbox'] + label { display: inline-block; width: 40px; height: 40px; padding: 10px; border: 1px solid #000000; }
-
-.custom_checkbox .type02 input[type='checkbox']:checked + label { background: red; }
-
-/* -------- Custom_Radio -------- */
-/**
-    type01: click_radio
-*/
-.custom_radio { position: relative; }
-
-.custom_radio .type01 input[type='radio'] + label span { display: inline-block; width: 19px; height: 19px; margin: -2px 10px 0 0; vertical-align: middle; background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat; cursor: pointer; }
-
-.custom_radio .type01 input[type='radio']:checked + label span { background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat; }
-
-/* -------- Custom_File -------- */
-/**
-    type01: btn_file
-    type02: label_btn
-    type03: 파일 이름 다른 곳 작성1
-    type04: 파일 이름 다른 곳 작성2
-    type05: 파일 이름 다른 곳 작성3
-    type06: 파일 추가/삭제
-    type07: type01과 같음
-*/
-.custom_file { position: relative; }
-
-.custom_file .type { margin: 0 0 10px; max-width: 300px; }
-
-.custom_file .file_name_show { float: left; min-width: 240px; height: 40px; padding: 0 16px; line-height: 40px; }
-
-.custom_file .file_name_show + label { display: block; float: right; width: 60px; height: 40px; padding: 10px; border: 1px solid black; text-align: center; }
-
-.custom_file .type02 { display: block; }
-
-.custom_file .type02 button { display: block; float: right; width: 60px; height: 40px; padding: 10px; border: 1px solid black; text-align: center; }
-
-/* -------- Custom_Select -------- */
-/**
-    type01: background_select
-*/
-.custom_select select { background: url(../img/common/bg_select.png) no-repeat 95% center; background-size: 17px 9px; }
-
-/* -------- Custom_Scroll -------- */
-/**
-    type01: 수평스크롤
-    type02: 스크롤바 커스텀
-*/
-.custom_scroll .type01 { overflow: auto; white-space: nowrap; }
-
-.custom_scroll .type01 a { display: inline-block; padding: 14px; text-align: center; }
-
-.custom_scroll .type01 a:hover { background: #777777; }
-
-.custom_scroll .type02 .sub_box { overflow: scroll; width: 300px; height: 140px; margin: 0 10px; padding: 10px; }
-
-.custom_scroll .type02 .sub_box::-webkit-scrollbar { width: 10px; height: 10px; }
-
-.custom_scroll .type02 .sub_box::-webkit-scrollbar-thumb { border-radius: 10px; background: red; }
-
-.custom_scroll .type02 .sub_box::-webkit-scrollbar-track { border-radius: 10px; background: gray; -webkit-box-shadow: inset 0px 0px 5px #fff; box-shadow: inset 0px 0px 5px #fff; }
-
-/* -------- Custom_Select -------- */
-/**
-    type01: 이미지 스프라이트
-*/
-.image_sprite .keyboard, .image_sprite .logo { background: url(../img/sprite/example.png); background-repeat: no-repeat; }
-
-.image_sprite .keyboard { display: inline-block; width: 39px; height: 24px; background-position: -840px -496px; background-repeat: no-repeat; vertical-align: top; }
-
-.image_sprite .logo { display: inline-block; width: 121px; height: 57px; background-position: -280px -594px; background-repeat: no-repeat; vertical-align: top; }
-
-/* -------- Animation -------- */
 /**
     type01: 모래시계
     type02: hover_line 애니메이션
@@ -913,27 +805,21 @@ strong { font-weight: 400; }
 
 .animation .type08 .snow::after { content: ''; position: absolute; top: 2000px; border-radius: 50%; background: transparent; }
 
-.animation .type08 .snow.snow1 { width: 1px; height: 1px; -webkit-box-shadow: 1668px 667px #FFF, 28px 1343px #FFF, 203px 273px #FFF, 1378px 1693px #FFF, 1846px 601px #FFF, 1604px 928px #FFF, 1362px 463px #FFF, 1442px 1797px #FFF, 1903px 1945px #FFF, 1993px 1952px #FFF, 1071px 320px #FFF, 1253px 1530px #FFF, 99px 108px #FFF, 1137px 888px #FFF, 398px 465px #FFF, 1894px 1558px #FFF, 1312px 226px #FFF, 1291px 1600px #FFF, 1600px 1192px #FFF, 907px 817px #FFF, 502px 1137px #FFF, 1100px 701px #FFF, 1439px 1304px #FFF, 639px 1090px #FFF, 619px 609px #FFF, 34px 553px #FFF, 540px 716px #FFF, 1251px 1665px #FFF, 1250px 795px #FFF, 1004px 1660px #FFF, 509px 1186px #FFF, 870px 1576px #FFF, 857px 1439px #FFF, 1391px 1256px #FFF, 1869px 1475px #FFF, 1211px 350px #FFF, 1359px 1035px #FFF, 1871px 1616px #FFF, 749px 353px #FFF, 625px 876px #FFF, 953px 615px #FFF, 1783px 1775px #FFF, 1140px 771px #FFF, 1169px 1333px #FFF, 1311px 1079px #FFF, 1431px 1791px #FFF, 1457px 252px #FFF, 1609px 783px #FFF, 1411px 627px #FFF, 951px 627px #FFF, 260px 1392px #FFF, 289px 1468px #FFF, 1427px 649px #FFF, 1580px 502px #FFF, 1031px 559px #FFF, 807px 1938px #FFF, 366px 579px #FFF, 237px 1625px #FFF, 1640px 1440px #FFF, 787px 1232px #FFF, 1097px 1778px #FFF, 1870px 820px #FFF, 172px 693px #FFF, 1865px 1475px #FFF, 1554px 1543px #FFF, 1852px 1623px #FFF, 710px 692px #FFF, 1604px 1921px #FFF, 1996px 379px #FFF, 201px 1766px #FFF, 1350px 1074px #FFF, 47px 1512px #FFF, 961px 1631px #FFF, 912px 312px #FFF, 292px 1937px #FFF, 1555px 1399px #FFF, 1840px 1627px #FFF, 705px 645px #FFF, 1201px 1698px #FFF, 1854px 74px #FFF, 340px 729px #FFF, 1615px 1906px #FFF, 187px 927px #FFF, 1593px 415px #FFF, 1688px 235px #FFF, 1814px 1535px #FFF, 794px 624px #FFF, 1185px 453px #FFF, 1977px 355px #FFF, 323px 276px #FFF, 1597px 127px #FFF, 1521px 978px #FFF, 351px 841px #FFF, 705px 1533px #FFF, 101px 27px #FFF, 1045px 1049px #FFF, 365px 1251px #FFF, 1032px 1066px #FFF, 1762px 1393px #FFF, 1277px 994px #FFF; box-shadow: 1668px 667px #FFF, 28px 1343px #FFF, 203px 273px #FFF, 1378px 1693px #FFF, 1846px 601px #FFF, 1604px 928px #FFF, 1362px 463px #FFF, 1442px 1797px #FFF, 1903px 1945px #FFF, 1993px 1952px #FFF, 1071px 320px #FFF, 1253px 1530px #FFF, 99px 108px #FFF, 1137px 888px #FFF, 398px 465px #FFF, 1894px 1558px #FFF, 1312px 226px #FFF, 1291px 1600px #FFF, 1600px 1192px #FFF, 907px 817px #FFF, 502px 1137px #FFF, 1100px 701px #FFF, 1439px 1304px #FFF, 639px 1090px #FFF, 619px 609px #FFF, 34px 553px #FFF, 540px 716px #FFF, 1251px 1665px #FFF, 1250px 795px #FFF, 1004px 1660px #FFF, 509px 1186px #FFF, 870px 1576px #FFF, 857px 1439px #FFF, 1391px 1256px #FFF, 1869px 1475px #FFF, 1211px 350px #FFF, 1359px 1035px #FFF, 1871px 1616px #FFF, 749px 353px #FFF, 625px 876px #FFF, 953px 615px #FFF, 1783px 1775px #FFF, 1140px 771px #FFF, 1169px 1333px #FFF, 1311px 1079px #FFF, 1431px 1791px #FFF, 1457px 252px #FFF, 1609px 783px #FFF, 1411px 627px #FFF, 951px 627px #FFF, 260px 1392px #FFF, 289px 1468px #FFF, 1427px 649px #FFF, 1580px 502px #FFF, 1031px 559px #FFF, 807px 1938px #FFF, 366px 579px #FFF, 237px 1625px #FFF, 1640px 1440px #FFF, 787px 1232px #FFF, 1097px 1778px #FFF, 1870px 820px #FFF, 172px 693px #FFF, 1865px 1475px #FFF, 1554px 1543px #FFF, 1852px 1623px #FFF, 710px 692px #FFF, 1604px 1921px #FFF, 1996px 379px #FFF, 201px 1766px #FFF, 1350px 1074px #FFF, 47px 1512px #FFF, 961px 1631px #FFF, 912px 312px #FFF, 292px 1937px #FFF, 1555px 1399px #FFF, 1840px 1627px #FFF, 705px 645px #FFF, 1201px 1698px #FFF, 1854px 74px #FFF, 340px 729px #FFF, 1615px 1906px #FFF, 187px 927px #FFF, 1593px 415px #FFF, 1688px 235px #FFF, 1814px 1535px #FFF, 794px 624px #FFF, 1185px 453px #FFF, 1977px 355px #FFF, 323px 276px #FFF, 1597px 127px #FFF, 1521px 978px #FFF, 351px 841px #FFF, 705px 1533px #FFF, 101px 27px #FFF, 1045px 1049px #FFF, 365px 1251px #FFF, 1032px 1066px #FFF, 1762px 1393px #FFF, 1277px 994px #FFF; -webkit-animation: animStar 50s linear infinite; animation: animStar 50s linear infinite; }
+.animation .type08 .snow.snow1 { width: 1px; height: 1px; -webkit-box-shadow: 1644px 947px #FFF, 152px 1637px #FFF, 278px 1401px #FFF, 1756px 1101px #FFF, 1461px 521px #FFF, 727px 1763px #FFF, 1564px 240px #FFF, 181px 949px #FFF, 692px 1645px #FFF, 1251px 1021px #FFF, 860px 1267px #FFF, 467px 90px #FFF, 964px 61px #FFF, 420px 378px #FFF, 1074px 608px #FFF, 615px 873px #FFF, 1877px 1059px #FFF, 570px 1082px #FFF, 361px 884px #FFF, 105px 1999px #FFF, 1132px 1036px #FFF, 742px 1569px #FFF, 1722px 1851px #FFF, 1396px 599px #FFF, 121px 437px #FFF, 1454px 1342px #FFF, 1564px 965px #FFF, 500px 1234px #FFF, 1528px 472px #FFF, 996px 583px #FFF, 946px 839px #FFF, 346px 1794px #FFF, 1067px 1069px #FFF, 1155px 1314px #FFF, 240px 1534px #FFF, 449px 757px #FFF, 455px 677px #FFF, 331px 409px #FFF, 1537px 1147px #FFF, 481px 1884px #FFF, 949px 1069px #FFF, 1073px 84px #FFF, 1059px 266px #FFF, 1547px 148px #FFF, 9px 817px #FFF, 1822px 845px #FFF, 1929px 1533px #FFF, 100px 1060px #FFF, 121px 571px #FFF, 1375px 155px #FFF, 123px 1962px #FFF, 10px 1928px #FFF, 35px 279px #FFF, 652px 1540px #FFF, 493px 199px #FFF, 1885px 1286px #FFF, 739px 706px #FFF, 720px 1605px #FFF, 634px 1721px #FFF, 1927px 1740px #FFF, 1178px 635px #FFF, 661px 626px #FFF, 1257px 256px #FFF, 1383px 1930px #FFF, 815px 1056px #FFF, 307px 1109px #FFF, 487px 641px #FFF, 138px 676px #FFF, 198px 1486px #FFF, 1226px 406px #FFF, 1357px 1861px #FFF, 1952px 101px #FFF, 442px 1227px #FFF, 1993px 1847px #FFF, 481px 123px #FFF, 841px 1770px #FFF, 1488px 1330px #FFF, 1483px 1410px #FFF, 391px 757px #FFF, 799px 565px #FFF, 939px 704px #FFF, 554px 1109px #FFF, 1636px 1796px #FFF, 698px 485px #FFF, 1767px 1019px #FFF, 1465px 1612px #FFF, 715px 1282px #FFF, 1993px 1140px #FFF, 79px 711px #FFF, 753px 1172px #FFF, 761px 781px #FFF, 895px 1277px #FFF, 742px 1261px #FFF, 1671px 389px #FFF, 548px 1995px #FFF, 1645px 545px #FFF, 432px 934px #FFF, 730px 1887px #FFF, 1069px 591px #FFF, 348px 289px #FFF; box-shadow: 1644px 947px #FFF, 152px 1637px #FFF, 278px 1401px #FFF, 1756px 1101px #FFF, 1461px 521px #FFF, 727px 1763px #FFF, 1564px 240px #FFF, 181px 949px #FFF, 692px 1645px #FFF, 1251px 1021px #FFF, 860px 1267px #FFF, 467px 90px #FFF, 964px 61px #FFF, 420px 378px #FFF, 1074px 608px #FFF, 615px 873px #FFF, 1877px 1059px #FFF, 570px 1082px #FFF, 361px 884px #FFF, 105px 1999px #FFF, 1132px 1036px #FFF, 742px 1569px #FFF, 1722px 1851px #FFF, 1396px 599px #FFF, 121px 437px #FFF, 1454px 1342px #FFF, 1564px 965px #FFF, 500px 1234px #FFF, 1528px 472px #FFF, 996px 583px #FFF, 946px 839px #FFF, 346px 1794px #FFF, 1067px 1069px #FFF, 1155px 1314px #FFF, 240px 1534px #FFF, 449px 757px #FFF, 455px 677px #FFF, 331px 409px #FFF, 1537px 1147px #FFF, 481px 1884px #FFF, 949px 1069px #FFF, 1073px 84px #FFF, 1059px 266px #FFF, 1547px 148px #FFF, 9px 817px #FFF, 1822px 845px #FFF, 1929px 1533px #FFF, 100px 1060px #FFF, 121px 571px #FFF, 1375px 155px #FFF, 123px 1962px #FFF, 10px 1928px #FFF, 35px 279px #FFF, 652px 1540px #FFF, 493px 199px #FFF, 1885px 1286px #FFF, 739px 706px #FFF, 720px 1605px #FFF, 634px 1721px #FFF, 1927px 1740px #FFF, 1178px 635px #FFF, 661px 626px #FFF, 1257px 256px #FFF, 1383px 1930px #FFF, 815px 1056px #FFF, 307px 1109px #FFF, 487px 641px #FFF, 138px 676px #FFF, 198px 1486px #FFF, 1226px 406px #FFF, 1357px 1861px #FFF, 1952px 101px #FFF, 442px 1227px #FFF, 1993px 1847px #FFF, 481px 123px #FFF, 841px 1770px #FFF, 1488px 1330px #FFF, 1483px 1410px #FFF, 391px 757px #FFF, 799px 565px #FFF, 939px 704px #FFF, 554px 1109px #FFF, 1636px 1796px #FFF, 698px 485px #FFF, 1767px 1019px #FFF, 1465px 1612px #FFF, 715px 1282px #FFF, 1993px 1140px #FFF, 79px 711px #FFF, 753px 1172px #FFF, 761px 781px #FFF, 895px 1277px #FFF, 742px 1261px #FFF, 1671px 389px #FFF, 548px 1995px #FFF, 1645px 545px #FFF, 432px 934px #FFF, 730px 1887px #FFF, 1069px 591px #FFF, 348px 289px #FFF; -webkit-animation: animStar 50s linear infinite; animation: animStar 50s linear infinite; }
 
-.animation .type08 .snow.snow1::after { width: 1px; height: 1px; -webkit-box-shadow: 1668px 667px #FFF, 28px 1343px #FFF, 203px 273px #FFF, 1378px 1693px #FFF, 1846px 601px #FFF, 1604px 928px #FFF, 1362px 463px #FFF, 1442px 1797px #FFF, 1903px 1945px #FFF, 1993px 1952px #FFF, 1071px 320px #FFF, 1253px 1530px #FFF, 99px 108px #FFF, 1137px 888px #FFF, 398px 465px #FFF, 1894px 1558px #FFF, 1312px 226px #FFF, 1291px 1600px #FFF, 1600px 1192px #FFF, 907px 817px #FFF, 502px 1137px #FFF, 1100px 701px #FFF, 1439px 1304px #FFF, 639px 1090px #FFF, 619px 609px #FFF, 34px 553px #FFF, 540px 716px #FFF, 1251px 1665px #FFF, 1250px 795px #FFF, 1004px 1660px #FFF, 509px 1186px #FFF, 870px 1576px #FFF, 857px 1439px #FFF, 1391px 1256px #FFF, 1869px 1475px #FFF, 1211px 350px #FFF, 1359px 1035px #FFF, 1871px 1616px #FFF, 749px 353px #FFF, 625px 876px #FFF, 953px 615px #FFF, 1783px 1775px #FFF, 1140px 771px #FFF, 1169px 1333px #FFF, 1311px 1079px #FFF, 1431px 1791px #FFF, 1457px 252px #FFF, 1609px 783px #FFF, 1411px 627px #FFF, 951px 627px #FFF, 260px 1392px #FFF, 289px 1468px #FFF, 1427px 649px #FFF, 1580px 502px #FFF, 1031px 559px #FFF, 807px 1938px #FFF, 366px 579px #FFF, 237px 1625px #FFF, 1640px 1440px #FFF, 787px 1232px #FFF, 1097px 1778px #FFF, 1870px 820px #FFF, 172px 693px #FFF, 1865px 1475px #FFF, 1554px 1543px #FFF, 1852px 1623px #FFF, 710px 692px #FFF, 1604px 1921px #FFF, 1996px 379px #FFF, 201px 1766px #FFF, 1350px 1074px #FFF, 47px 1512px #FFF, 961px 1631px #FFF, 912px 312px #FFF, 292px 1937px #FFF, 1555px 1399px #FFF, 1840px 1627px #FFF, 705px 645px #FFF, 1201px 1698px #FFF, 1854px 74px #FFF, 340px 729px #FFF, 1615px 1906px #FFF, 187px 927px #FFF, 1593px 415px #FFF, 1688px 235px #FFF, 1814px 1535px #FFF, 794px 624px #FFF, 1185px 453px #FFF, 1977px 355px #FFF, 323px 276px #FFF, 1597px 127px #FFF, 1521px 978px #FFF, 351px 841px #FFF, 705px 1533px #FFF, 101px 27px #FFF, 1045px 1049px #FFF, 365px 1251px #FFF, 1032px 1066px #FFF, 1762px 1393px #FFF, 1277px 994px #FFF; box-shadow: 1668px 667px #FFF, 28px 1343px #FFF, 203px 273px #FFF, 1378px 1693px #FFF, 1846px 601px #FFF, 1604px 928px #FFF, 1362px 463px #FFF, 1442px 1797px #FFF, 1903px 1945px #FFF, 1993px 1952px #FFF, 1071px 320px #FFF, 1253px 1530px #FFF, 99px 108px #FFF, 1137px 888px #FFF, 398px 465px #FFF, 1894px 1558px #FFF, 1312px 226px #FFF, 1291px 1600px #FFF, 1600px 1192px #FFF, 907px 817px #FFF, 502px 1137px #FFF, 1100px 701px #FFF, 1439px 1304px #FFF, 639px 1090px #FFF, 619px 609px #FFF, 34px 553px #FFF, 540px 716px #FFF, 1251px 1665px #FFF, 1250px 795px #FFF, 1004px 1660px #FFF, 509px 1186px #FFF, 870px 1576px #FFF, 857px 1439px #FFF, 1391px 1256px #FFF, 1869px 1475px #FFF, 1211px 350px #FFF, 1359px 1035px #FFF, 1871px 1616px #FFF, 749px 353px #FFF, 625px 876px #FFF, 953px 615px #FFF, 1783px 1775px #FFF, 1140px 771px #FFF, 1169px 1333px #FFF, 1311px 1079px #FFF, 1431px 1791px #FFF, 1457px 252px #FFF, 1609px 783px #FFF, 1411px 627px #FFF, 951px 627px #FFF, 260px 1392px #FFF, 289px 1468px #FFF, 1427px 649px #FFF, 1580px 502px #FFF, 1031px 559px #FFF, 807px 1938px #FFF, 366px 579px #FFF, 237px 1625px #FFF, 1640px 1440px #FFF, 787px 1232px #FFF, 1097px 1778px #FFF, 1870px 820px #FFF, 172px 693px #FFF, 1865px 1475px #FFF, 1554px 1543px #FFF, 1852px 1623px #FFF, 710px 692px #FFF, 1604px 1921px #FFF, 1996px 379px #FFF, 201px 1766px #FFF, 1350px 1074px #FFF, 47px 1512px #FFF, 961px 1631px #FFF, 912px 312px #FFF, 292px 1937px #FFF, 1555px 1399px #FFF, 1840px 1627px #FFF, 705px 645px #FFF, 1201px 1698px #FFF, 1854px 74px #FFF, 340px 729px #FFF, 1615px 1906px #FFF, 187px 927px #FFF, 1593px 415px #FFF, 1688px 235px #FFF, 1814px 1535px #FFF, 794px 624px #FFF, 1185px 453px #FFF, 1977px 355px #FFF, 323px 276px #FFF, 1597px 127px #FFF, 1521px 978px #FFF, 351px 841px #FFF, 705px 1533px #FFF, 101px 27px #FFF, 1045px 1049px #FFF, 365px 1251px #FFF, 1032px 1066px #FFF, 1762px 1393px #FFF, 1277px 994px #FFF; }
+.animation .type08 .snow.snow1::after { width: 1px; height: 1px; -webkit-box-shadow: 1644px 947px #FFF, 152px 1637px #FFF, 278px 1401px #FFF, 1756px 1101px #FFF, 1461px 521px #FFF, 727px 1763px #FFF, 1564px 240px #FFF, 181px 949px #FFF, 692px 1645px #FFF, 1251px 1021px #FFF, 860px 1267px #FFF, 467px 90px #FFF, 964px 61px #FFF, 420px 378px #FFF, 1074px 608px #FFF, 615px 873px #FFF, 1877px 1059px #FFF, 570px 1082px #FFF, 361px 884px #FFF, 105px 1999px #FFF, 1132px 1036px #FFF, 742px 1569px #FFF, 1722px 1851px #FFF, 1396px 599px #FFF, 121px 437px #FFF, 1454px 1342px #FFF, 1564px 965px #FFF, 500px 1234px #FFF, 1528px 472px #FFF, 996px 583px #FFF, 946px 839px #FFF, 346px 1794px #FFF, 1067px 1069px #FFF, 1155px 1314px #FFF, 240px 1534px #FFF, 449px 757px #FFF, 455px 677px #FFF, 331px 409px #FFF, 1537px 1147px #FFF, 481px 1884px #FFF, 949px 1069px #FFF, 1073px 84px #FFF, 1059px 266px #FFF, 1547px 148px #FFF, 9px 817px #FFF, 1822px 845px #FFF, 1929px 1533px #FFF, 100px 1060px #FFF, 121px 571px #FFF, 1375px 155px #FFF, 123px 1962px #FFF, 10px 1928px #FFF, 35px 279px #FFF, 652px 1540px #FFF, 493px 199px #FFF, 1885px 1286px #FFF, 739px 706px #FFF, 720px 1605px #FFF, 634px 1721px #FFF, 1927px 1740px #FFF, 1178px 635px #FFF, 661px 626px #FFF, 1257px 256px #FFF, 1383px 1930px #FFF, 815px 1056px #FFF, 307px 1109px #FFF, 487px 641px #FFF, 138px 676px #FFF, 198px 1486px #FFF, 1226px 406px #FFF, 1357px 1861px #FFF, 1952px 101px #FFF, 442px 1227px #FFF, 1993px 1847px #FFF, 481px 123px #FFF, 841px 1770px #FFF, 1488px 1330px #FFF, 1483px 1410px #FFF, 391px 757px #FFF, 799px 565px #FFF, 939px 704px #FFF, 554px 1109px #FFF, 1636px 1796px #FFF, 698px 485px #FFF, 1767px 1019px #FFF, 1465px 1612px #FFF, 715px 1282px #FFF, 1993px 1140px #FFF, 79px 711px #FFF, 753px 1172px #FFF, 761px 781px #FFF, 895px 1277px #FFF, 742px 1261px #FFF, 1671px 389px #FFF, 548px 1995px #FFF, 1645px 545px #FFF, 432px 934px #FFF, 730px 1887px #FFF, 1069px 591px #FFF, 348px 289px #FFF; box-shadow: 1644px 947px #FFF, 152px 1637px #FFF, 278px 1401px #FFF, 1756px 1101px #FFF, 1461px 521px #FFF, 727px 1763px #FFF, 1564px 240px #FFF, 181px 949px #FFF, 692px 1645px #FFF, 1251px 1021px #FFF, 860px 1267px #FFF, 467px 90px #FFF, 964px 61px #FFF, 420px 378px #FFF, 1074px 608px #FFF, 615px 873px #FFF, 1877px 1059px #FFF, 570px 1082px #FFF, 361px 884px #FFF, 105px 1999px #FFF, 1132px 1036px #FFF, 742px 1569px #FFF, 1722px 1851px #FFF, 1396px 599px #FFF, 121px 437px #FFF, 1454px 1342px #FFF, 1564px 965px #FFF, 500px 1234px #FFF, 1528px 472px #FFF, 996px 583px #FFF, 946px 839px #FFF, 346px 1794px #FFF, 1067px 1069px #FFF, 1155px 1314px #FFF, 240px 1534px #FFF, 449px 757px #FFF, 455px 677px #FFF, 331px 409px #FFF, 1537px 1147px #FFF, 481px 1884px #FFF, 949px 1069px #FFF, 1073px 84px #FFF, 1059px 266px #FFF, 1547px 148px #FFF, 9px 817px #FFF, 1822px 845px #FFF, 1929px 1533px #FFF, 100px 1060px #FFF, 121px 571px #FFF, 1375px 155px #FFF, 123px 1962px #FFF, 10px 1928px #FFF, 35px 279px #FFF, 652px 1540px #FFF, 493px 199px #FFF, 1885px 1286px #FFF, 739px 706px #FFF, 720px 1605px #FFF, 634px 1721px #FFF, 1927px 1740px #FFF, 1178px 635px #FFF, 661px 626px #FFF, 1257px 256px #FFF, 1383px 1930px #FFF, 815px 1056px #FFF, 307px 1109px #FFF, 487px 641px #FFF, 138px 676px #FFF, 198px 1486px #FFF, 1226px 406px #FFF, 1357px 1861px #FFF, 1952px 101px #FFF, 442px 1227px #FFF, 1993px 1847px #FFF, 481px 123px #FFF, 841px 1770px #FFF, 1488px 1330px #FFF, 1483px 1410px #FFF, 391px 757px #FFF, 799px 565px #FFF, 939px 704px #FFF, 554px 1109px #FFF, 1636px 1796px #FFF, 698px 485px #FFF, 1767px 1019px #FFF, 1465px 1612px #FFF, 715px 1282px #FFF, 1993px 1140px #FFF, 79px 711px #FFF, 753px 1172px #FFF, 761px 781px #FFF, 895px 1277px #FFF, 742px 1261px #FFF, 1671px 389px #FFF, 548px 1995px #FFF, 1645px 545px #FFF, 432px 934px #FFF, 730px 1887px #FFF, 1069px 591px #FFF, 348px 289px #FFF; }
 
-.animation .type08 .snow.snow2 { width: 2px; height: 2px; -webkit-box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; -webkit-animation: animStar 100s linear infinite; animation: animStar 100s linear infinite; }
+.animation .type08 .snow.snow2 { width: 2px; height: 2px; -webkit-box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; -webkit-animation: animStar 100s linear infinite; animation: animStar 100s linear infinite; }
 
-.animation .type08 .snow.snow2::after { width: 2px; height: 2px; -webkit-box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; }
+.animation .type08 .snow.snow2::after { width: 2px; height: 2px; -webkit-box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; }
 
-.animation .type08 .snow.snow3 { width: 3px; height: 3px; -webkit-box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; -webkit-animation: animStar 150s linear infinite; animation: animStar 150s linear infinite; }
+.animation .type08 .snow.snow3 { width: 3px; height: 3px; -webkit-box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; -webkit-animation: animStar 150s linear infinite; animation: animStar 150s linear infinite; }
 
-.animation .type08 .snow.snow3::after { width: 3px; height: 3px; -webkit-box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; box-shadow: 855px 1957px #FFF, 355px 1038px #FFF, 433px 1332px #FFF, 372px 783px #FFF, 180px 1580px #FFF, 165px 1522px #FFF, 36px 855px #FFF, 555px 1220px #FFF, 1813px 946px #FFF, 27px 357px #FFF, 1810px 428px #FFF, 201px 369px #FFF, 1379px 1233px #FFF, 265px 194px #FFF, 290px 998px #FFF, 478px 176px #FFF, 1028px 731px #FFF, 913px 1349px #FFF, 1444px 1798px #FFF, 3px 160px #FFF, 1042px 416px #FFF, 1306px 1876px #FFF, 1412px 1866px #FFF, 634px 1202px #FFF, 1817px 1756px #FFF, 405px 1794px #FFF, 1486px 1891px #FFF, 416px 1935px #FFF, 483px 223px #FFF, 697px 1041px #FFF, 1558px 1694px #FFF, 642px 1056px #FFF, 554px 1652px #FFF, 1799px 713px #FFF, 572px 1112px #FFF, 162px 1908px #FFF, 934px 1061px #FFF, 357px 222px #FFF, 220px 1639px #FFF, 451px 63px #FFF, 565px 859px #FFF, 1234px 913px #FFF, 1201px 1457px #FFF, 826px 810px #FFF, 730px 800px #FFF, 1039px 934px #FFF, 919px 1001px #FFF, 1828px 301px #FFF, 845px 995px #FFF, 85px 676px #FFF; }
+.animation .type08 .snow.snow3::after { width: 3px; height: 3px; -webkit-box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; box-shadow: 713px 1951px #FFF, 831px 1890px #FFF, 1407px 799px #FFF, 945px 184px #FFF, 608px 550px #FFF, 301px 46px #FFF, 1509px 1974px #FFF, 1370px 1971px #FFF, 902px 776px #FFF, 1096px 3px #FFF, 1468px 1192px #FFF, 1029px 99px #FFF, 1443px 1377px #FFF, 1181px 1800px #FFF, 1382px 895px #FFF, 1637px 1957px #FFF, 266px 1392px #FFF, 546px 1877px #FFF, 1534px 348px #FFF, 1323px 1287px #FFF, 485px 299px #FFF, 1404px 1225px #FFF, 34px 412px #FFF, 112px 969px #FFF, 1854px 906px #FFF, 1319px 447px #FFF, 1737px 1332px #FFF, 1197px 362px #FFF, 1508px 64px #FFF, 484px 1909px #FFF, 525px 1231px #FFF, 852px 475px #FFF, 1514px 1057px #FFF, 703px 1066px #FFF, 1361px 461px #FFF, 1124px 1022px #FFF, 951px 1750px #FFF, 919px 449px #FFF, 496px 144px #FFF, 241px 1103px #FFF, 710px 965px #FFF, 470px 433px #FFF, 1809px 824px #FFF, 713px 1751px #FFF, 1400px 564px #FFF, 610px 1771px #FFF, 301px 236px #FFF, 1105px 1242px #FFF, 189px 812px #FFF, 584px 1405px #FFF; }
 
-@-webkit-keyframes animStar { from { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-  to { -webkit-transform: translateY(0px); transform: translateY(0px); } }
-
-@keyframes animStar { from { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
-  to { -webkit-transform: translateY(0px); transform: translateY(0px); } }
-
-/* -------- Dropdown -------- */
 /**
-    type01: normal DropDown
+    type01: Toggle DropDown
+    type02: Each DropDown
 */
 .dropdown .dropbtn { width: 100%; margin: 0 0 10px; }
 
@@ -947,17 +833,8 @@ strong { font-weight: 400; }
 
 .dropdown .sub_box { display: none; width: 100%; height: 100px; padding: 10px; background: #aeaeae; }
 
-.masonry { display: -ms-grid; display: grid; overflow: hidden; grid-gap: 10px; -ms-grid-columns: (minmax(250px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-auto-rows: minmax(200px, auto); }
+#followMenu { position: absolute; top: 300px; right: 50px; background: red; }
 
-.masonry div { border: 1px solid gray; }
-
-.masonry .photo { background: blue; -ms-grid-row-span: 2; grid-row-end: span 2; }
-
-.masonry .project { background: gray; -ms-grid-row-span: 3; grid-row-end: span 3; }
-
-.masonry .blog { background: greenyellow; -ms-grid-row-span: 1; grid-row-end: span 1; }
-
-/* -------- Fonts -------- */
 /**
     type01: Fonts 영어만
     type02: Fonts 한글 가능
@@ -972,37 +849,130 @@ strong { font-weight: 400; }
 
 .fonts_item--Noto { font-family: 'Noto Sans KR', sans-serif; }
 
-@-webkit-keyframes pulse { 25% { opacity: 0.4; }
-  100% { -webkit-transform: scale(1); transform: scale(1); } }
+/**
+    type01: 이미지 스프라이트
+*/
+.image_sprite .keyboard, .image_sprite .logo { background: url(../img/sprite/example.png); background-repeat: no-repeat; }
 
-@keyframes pulse { 25% { opacity: 0.4; }
-  100% { -webkit-transform: scale(1); transform: scale(1); } }
+.image_sprite .keyboard { display: inline-block; width: 39px; height: 24px; background-position: -840px -496px; background-repeat: no-repeat; vertical-align: top; }
 
-@-webkit-keyframes Hello { 0% { opacity: 0; }
-  66% { opacity: 0; }
-  96% { opacity: 0.4; }
-  100% { opacity: 1; } }
+.image_sprite .logo { display: inline-block; width: 121px; height: 57px; background-position: -280px -594px; background-repeat: no-repeat; vertical-align: top; }
 
-@keyframes Hello { 0% { opacity: 0; }
-  66% { opacity: 0; }
-  96% { opacity: 0.4; }
-  100% { opacity: 1; } }
+/**
+    type01: background_select
+*/
+.custom_select select { background: url(../img/common/bg_select.png) no-repeat 95% center; background-size: 17px 9px; }
 
-@-webkit-keyframes show { 0% { opacity: 1; }
-  60% { opacity: 1; }
-  100% { opacity: 0; } }
+/**
+    type01: btn_file
+    type02: label_btn
+    type03: 파일 이름 다른 곳 작성1
+    type04: 파일 이름 다른 곳 작성2
+    type05: 파일 이름 다른 곳 작성3
+    type06: 파일 추가/삭제
+    type07: type01과 같음
+*/
+.custom_file { position: relative; }
 
-@keyframes show { 0% { opacity: 1; }
-  60% { opacity: 1; }
-  100% { opacity: 0; } }
+.custom_file .type { margin: 0 0 10px; max-width: 300px; }
 
-@-webkit-keyframes drift { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+.custom_file .file_name_show { float: left; min-width: 240px; height: 40px; padding: 0 16px; line-height: 40px; }
 
-@keyframes drift { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+.custom_file .file_name_show + label { display: block; float: right; width: 60px; height: 40px; padding: 10px; border: 1px solid black; text-align: center; }
 
-#followMenu { position: absolute; top: 300px; right: 50px; background: red; }
+.custom_file .type02 { display: block; }
+
+.custom_file .type02 button { display: block; float: right; width: 60px; height: 40px; padding: 10px; border: 1px solid black; text-align: center; }
+
+/**
+    type01: click_radio
+*/
+.custom_radio { position: relative; }
+
+.custom_radio .type01 input[type='radio'] + label span { display: inline-block; width: 19px; height: 19px; margin: -2px 10px 0 0; vertical-align: middle; background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat; cursor: pointer; }
+
+.custom_radio .type01 input[type='radio']:checked + label span { background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat; }
+
+/**
+    type01: check box - 백이미지 활용
+    type02: btn_checkbox
+    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
+*/
+.custom_checkbox .sub_box { margin: 0 0 5px; }
+
+.custom_checkbox .type01 { position: relative; }
+
+.custom_checkbox .type01 z input[type='checkbox'] + label span { display: inline-block; width: 19px; height: 19px; margin: -2px 10px 0; vertical-align: middle; background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat; cursor: pointer; }
+
+.custom_checkbox .type01 z input[type='checkbox']:checked + label span { background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat; }
+
+.custom_checkbox .type02 { position: relative; }
+
+.custom_checkbox .type02 input[type='checkbox'] + label { display: inline-block; width: 40px; height: 40px; padding: 10px; border: 1px solid #000000; }
+
+.custom_checkbox .type02 input[type='checkbox']:checked + label { background: red; }
+
+.masonry { display: -ms-grid; display: grid; overflow: hidden; grid-gap: 10px; -ms-grid-columns: (minmax(250px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-auto-rows: minmax(200px, auto); }
+
+.masonry div { border: 1px solid gray; }
+
+.masonry .photo { background: blue; -ms-grid-row-span: 2; grid-row-end: span 2; }
+
+.masonry .project { background: gray; -ms-grid-row-span: 3; grid-row-end: span 3; }
+
+.masonry .blog { background: greenyellow; -ms-grid-row-span: 1; grid-row-end: span 1; }
+
+@-webkit-keyframes symbol-side { 0% { top: 100%; }
+  100% { top: 0; } }
+
+@keyframes symbol-side { 0% { top: 100%; }
+  100% { top: 0; } }
+
+@-webkit-keyframes symbol-middle { 0% { height: 0%; }
+  100% { height: 100%; } }
+
+@keyframes symbol-middle { 0% { height: 0%; }
+  100% { height: 100%; } }
+
+.nexflex .header { display: -webkit-box; display: -ms-flexbox; display: flex; position: fixed; top: 0; left: 0; z-index: 1000; width: 100vw; height: 105px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: #fff; }
+
+.nexflex .main { position: relative; width: 100vw; height: 100vh; background: gray; }
+
+.nexflex .main .page { width: 100%; background: #fff; }
+
+.nexflex .logged-out { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; min-height: calc(100vh - 100px); -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; overflow: hidden; max-width: 1420px; margin: 0 auto; padding: 0 40px; }
+
+.nexflex .logged-out .container { position: relative; width: 50%; display: inline-block; min-height: 100%; overflow: hidden; }
+
+.nexflex .logged-out .symbol-wrapper { position: absolute; right: 40px; min-width: 53vh; }
+
+.nexflex .logged-out .symbol-mask { overflow: hidden; position: absolute; width: 100%; }
+
+.nexflex .logged-out .symbol-left { top: 100%; left: 0; width: 36%; height: 100%; background: #af1f1f; /* animation-timing-function: linear; */ -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-name: symbol-side; animation-name: symbol-side; /* 애니메이션 이름 */ -webkit-animation-duration: 0.75s; animation-duration: 0.75s; /* 몇 초안에 일어날지 */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; /*반복횟수*/ /* animation-direction:alternate; 종료 후 다시 처음부터 시작할지 역방향으로 진행할지 결정  == 방향 지정 */ -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; /* 애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정 */ -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* animation-timing-function:cubic-bezier(0, 1, 0.5, 1); */ }
+
+.nexflex .logged-out .symbol-right { top: 100%; right: 0; width: 36%; height: 100%; background: #af1f1f; -webkit-animation-name: symbol-side; animation-name: symbol-side; -webkit-animation-duration: 0.75s; animation-duration: 0.75s; -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 0.46s; animation-delay: 0.46s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+
+.nexflex .logged-out .symbol-middle { width: 34%; /* height: 100vh; */ height: 0px; /* min-height: 100vh; */ left: 36%; /* transform: rotate(-19.5deg) scaleY(1.3); */ -webkit-transform: rotate(-19.5deg) scaleY(1.3); transform: rotate(-19.5deg) scaleY(1.3); /* transform-origin:left; */ background: #e50914; -webkit-animation-name: symbol-middle; animation-name: symbol-middle; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; /* animation-direction: alternate; */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 0.23s; animation-delay: 0.23s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+
+.pageTrans { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+
+.pageTrans > div { width: 100%; height: 12.5%; background: blueviolet; -webkit-transition: -webkit-transform 500ms; transition: -webkit-transform 500ms; transition: transform 500ms; transition: transform 500ms, -webkit-transform 500ms; }
+
+.pageTrans > div:nth-child(1) { -webkit-transition-delay: 100ms; transition-delay: 100ms; }
+
+.pageTrans > div:nth-child(2) { -webkit-transition-delay: 200ms; transition-delay: 200ms; }
+
+.pageTrans > div:nth-child(3) { -webkit-transition-delay: 300ms; transition-delay: 300ms; }
+
+.pageTrans > div:nth-child(4) { -webkit-transition-delay: 400ms; transition-delay: 400ms; }
+
+.pageTrans > div:nth-child(5) { -webkit-transition-delay: 500ms; transition-delay: 500ms; }
+
+.pageTrans > div:nth-child(6) { -webkit-transition-delay: 600ms; transition-delay: 600ms; }
+
+.pageTrans > div:nth-child(7) { -webkit-transition-delay: 700ms; transition-delay: 700ms; }
+
+.pageTrans > div:nth-child(8) { -webkit-transition-delay: 800ms; transition-delay: 800ms; }
 
 .one_day_popup { position: absolute; width: 100vw; height: 100vh; z-index: 9999; background: url(../img/1day/1.png) no-repeat; padding: 180px 30px; display: none; }
 
@@ -1026,56 +996,76 @@ strong { font-weight: 400; }
   100% { display: none;
     opacity: 0; } }
 
-.nexflex .header { display: -webkit-box; display: -ms-flexbox; display: flex; position: fixed; top: 0; left: 0; z-index: 1000; width: 100vw; height: 105px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background: #fff; }
+/**
+    type01: 수평스크롤
+    type02: 스크롤바 커스텀
+*/
+.custom_scroll .type01 { overflow: auto; white-space: nowrap; }
 
-.nexflex .main { position: relative; width: 100vw; height: 100vh; background: gray; }
+.custom_scroll .type01 a { display: inline-block; padding: 14px; text-align: center; }
 
-.nexflex .main .page { width: 100%; background: #fff; }
+.custom_scroll .type01 a:hover { background: #777777; }
 
-.nexflex .logged-out { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; min-height: calc(100vh - 100px); -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; overflow: hidden; max-width: 1420px; margin: 0 auto; padding: 0 40px; }
+.custom_scroll .type02 .sub_box { overflow: scroll; width: 300px; height: 140px; margin: 0 10px; padding: 10px; }
 
-.nexflex .logged-out .container { position: relative; width: 50%; display: inline-block; min-height: 100%; overflow: hidden; }
+.custom_scroll .type02 .sub_box::-webkit-scrollbar { width: 10px; height: 10px; }
 
-.nexflex .logged-out .symbol-wrapper { position: absolute; right: 40px; min-width: 53vh; }
+.custom_scroll .type02 .sub_box::-webkit-scrollbar-thumb { border-radius: 10px; background: red; }
 
-.nexflex .logged-out .symbol-mask { overflow: hidden; position: absolute; width: 100%; }
+.custom_scroll .type02 .sub_box::-webkit-scrollbar-track { border-radius: 10px; background: gray; -webkit-box-shadow: inset 0px 0px 5px #fff; box-shadow: inset 0px 0px 5px #fff; }
 
-.nexflex .logged-out .symbol-left { top: 100%; left: 0; width: 36%; height: 100%; background: #af1f1f; /* animation-timing-function: linear; */ -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-name: symbol-side; animation-name: symbol-side; /* 애니메이션 이름 */ -webkit-animation-duration: 0.75s; animation-duration: 0.75s; /* 몇 초안에 일어날지 */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; /*반복횟수*/ /* animation-direction:alternate; 종료 후 다시 처음부터 시작할지 역방향으로 진행할지 결정  == 방향 지정 */ -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; /* 애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 지정 */ -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* animation-timing-function:cubic-bezier(0, 1, 0.5, 1); */ }
+/**
+    type01: active 했을 경우, bootstrap_menu
+    type02: active, hover 했을 경우, border 선이 항목별 끝까지 직선으로 그어짐
+    type03: active, hover 했을 경우, border 선이 항목별 끝까지 box형으로 그어짐
+*/
+.tab .type01 { border-bottom: 1px solid #dddddd; }
 
-.nexflex .logged-out .symbol-right { top: 100%; right: 0; width: 36%; height: 100%; background: #af1f1f; -webkit-animation-name: symbol-side; animation-name: symbol-side; -webkit-animation-duration: 0.75s; animation-duration: 0.75s; -webkit-animation-direction: alternate; animation-direction: alternate; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 0.46s; animation-delay: 0.46s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+.tab .type01 ul > li { float: left; margin-bottom: -1px; }
 
-.nexflex .logged-out .symbol-middle { width: 34%; /* height: 100vh; */ height: 0px; /* min-height: 100vh; */ left: 36%; /* transform: rotate(-19.5deg) scaleY(1.3); */ -webkit-transform: rotate(-19.5deg) scaleY(1.3); transform: rotate(-19.5deg) scaleY(1.3); /* transform-origin:left; */ background: #e50914; -webkit-animation-name: symbol-middle; animation-name: symbol-middle; -webkit-animation-duration: 0.15s; animation-duration: 0.15s; /* animation-direction: alternate; */ -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 0.23s; animation-delay: 0.23s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: linear; animation-timing-function: linear; }
+.tab .type01 ul > li span { display: block; position: relative; padding: 10px 15px; cursor: pointer; }
 
-@-webkit-keyframes symbol-side { 0% { top: 100%; }
-  100% { top: 0; } }
+.tab .type01 ul > li.active span { border: 1px solid #dddddd; border-bottom-color: transparent; background: #ffffff; }
 
-@keyframes symbol-side { 0% { top: 100%; }
-  100% { top: 0; } }
+.tab .type02 ul li { float: left; position: relative; width: 25%; height: 40px; line-height: 40px; text-align: center; cursor: pointer; }
 
-@-webkit-keyframes symbol-middle { 0% { height: 0%; }
-  100% { height: 100%; } }
+.tab .type02 ul li::after { display: block; position: absolute; top: 0; bottom: 0; z-index: 1; content: ''; border-right: 1px solid #ddd; }
 
-@keyframes symbol-middle { 0% { height: 0%; }
-  100% { height: 100%; } }
+.tab .type02 ul li:last-child span { border-right: 1px solid #ddd; }
 
-.pageTrans { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+.tab .type02 ul li.active::before { display: block; position: absolute; left: 0; right: -1px; z-index: 2; content: ''; border-top: 2px solid red; }
 
-.pageTrans > div { width: 100%; height: 12.5%; background: blueviolet; -webkit-transition: -webkit-transform 500ms; transition: -webkit-transform 500ms; transition: transform 500ms; transition: transform 500ms, -webkit-transform 500ms; }
+.tab .type02 ul li.active:last-child::before { right: 0; }
 
-.pageTrans > div:nth-child(1) { -webkit-transition-delay: 100ms; transition-delay: 100ms; }
+.tab .type02 ul li.active span { color: red; }
 
-.pageTrans > div:nth-child(2) { -webkit-transition-delay: 200ms; transition-delay: 200ms; }
+.tab .type02 ul li.active span::after { display: block; position: absolute; left: 1px; right: 0; bottom: -1px; content: ''; border-bottom: 1px solid #fff; }
 
-.pageTrans > div:nth-child(3) { -webkit-transition-delay: 300ms; transition-delay: 300ms; }
+.tab .type02 ul li span { display: block; position: relative; height: 100%; margin: 0 0 -1px; border: 1px solid #ddd; border-left: 0; border-right: 0; }
 
-.pageTrans > div:nth-child(4) { -webkit-transition-delay: 400ms; transition-delay: 400ms; }
+.tab .type03 ul li { float: left; position: relative; width: calc(25% + 1px); height: 40px; margin: 0 0 0 -1px; line-height: 40px; text-align: center; cursor: pointer; }
 
-.pageTrans > div:nth-child(5) { -webkit-transition-delay: 500ms; transition-delay: 500ms; }
+.tab .type03 ul li::after { display: block; position: absolute; top: 10px; bottom: 10px; z-index: 1; content: ''; border-right: 1px solid #ddd; }
 
-.pageTrans > div:nth-child(6) { -webkit-transition-delay: 600ms; transition-delay: 600ms; }
+.tab .type03 ul li:first-child span { border-left: 1px solid #ddd; }
 
-.pageTrans > div:nth-child(7) { -webkit-transition-delay: 700ms; transition-delay: 700ms; }
+.tab .type03 ul li:last-child span { border-right: 1px solid #ddd; }
 
-.pageTrans > div:nth-child(8) { -webkit-transition-delay: 800ms; transition-delay: 800ms; }
+.tab .type03 ul li.active span { z-index: 3; border: 1px solid red; border-top-width: 2px; border-bottom: 0; color: red; }
+
+.tab .type03 ul li.active span::after { display: block; position: absolute; left: 1px; right: 0; content: ''; border-bottom: 1px solid #fff; }
+
+.tab .type03 ul li span { display: block; position: relative; height: 100%; margin: 0 0 -1px; border: 1px solid #ddd; border-left: 0; border-right: 0; }
+
+/**
+    type01: 한글자씩 떨어짐
+    type02: 한태그씩 떨어짐
+    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
+*/
+.text_justify .type .justify { text-align: justify; text-align-last: justify; }
+
+@font-face { font-family: "Wemakeprice"; src: url("../../fonts/Wemakeprice/Wemakeprice-Bold.woff") format("woff"), url("../../fonts/Wemakeprice/Wemakeprice-Bold.ttf") format("truetype"); font-weight: noraml; font-style: normal; }
 
 body.page.reveal #loader > div { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+
+.nav .box .title a { font-family: 'Wemakeprice'; }

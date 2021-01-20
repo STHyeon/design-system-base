@@ -1,0 +1,134 @@
+/**
+    type01: background_select
+*/
+
+.custom_select select {
+    background: url(../img/common/bg_select.png) no-repeat 95% center;
+    background-size: 17px 9px;
+}
+
+/**
+    type01: btn_file
+    type02: label_btn
+    type03: 파일 이름 다른 곳 작성1
+    type04: 파일 이름 다른 곳 작성2
+    type05: 파일 이름 다른 곳 작성3
+    type06: 파일 추가/삭제
+    type07: type01과 같음
+*/
+
+.custom_file {
+    position: relative;
+
+    .type {
+        margin: 0 0 10px;
+        max-width: 300px;
+    }
+
+    .file_name_show {
+        float: left;
+        min-width: 240px;
+        height: 40px;
+        padding: 0 16px;
+        line-height: 40px;
+
+        & + label {
+            display: block;
+            float: right;
+            width: 60px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+
+    .type02 {
+        display: block;
+
+        button {
+            display: block;
+            float: right;
+            width: 60px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+}
+
+/**
+    type01: click_radio
+*/
+
+.custom_radio {
+    position: relative;
+
+    .type01 {
+        input[type='radio'] {
+            & + label span {
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                margin: -2px 10px 0 0;
+                vertical-align: middle;
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+                cursor: pointer;
+            }
+
+            &:checked + label span {
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+            }
+        }
+    }
+}
+
+/**
+    type01: check box - 백이미지 활용
+    type02: btn_checkbox
+    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
+*/
+
+.custom_checkbox {
+    .sub_box {
+        margin: 0 0 5px;
+    }
+
+    .type01 {
+        position: relative;
+        z input[type='checkbox'] {
+            & + label span {
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                margin: -2px 10px 0;
+                vertical-align: middle;
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+                cursor: pointer;
+            }
+
+            &:checked + label span {
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+            }
+        }
+    }
+
+    .type02 {
+        position: relative;
+
+        input[type='checkbox'] {
+            & + label {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+                border: 1px solid #000000;
+            }
+
+            &:checked + label {
+                background: red;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+/**
+    type01: Toggle DropDown
+    type02: Each DropDown
+*/
+
+.dropdown {
+    .dropbtn {
+        width: 100%;
+        margin: 0 0 10px;
+
+        &.active + .sub_box {
+            display: block;
+        }
+    }
+
+    .type {
+        .sub_con {
+            float: left;
+            margin: 0 0 20px;
+        }
+
+        &01 .sub_con {
+            width: 50%;
+        }
+
+        &02 .sub_con {
+            width: 33.33%;
+        }
+    }
+
+    .sub_box {
+        display: none;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        background: #aeaeae;
+    }
+}

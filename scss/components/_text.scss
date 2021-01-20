@@ -1,0 +1,12 @@
+/**
+    type01: 한글자씩 떨어짐
+    type02: 한태그씩 떨어짐
+    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
+*/
+
+.text_justify {
+    .type .justify {
+        text-align: justify;
+        text-align-last: justify;
+    }
+}

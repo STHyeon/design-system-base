@@ -1,0 +1,31 @@
+/**
+    type01: 불규칙 배열
+    type02: 프린트용 페이지
+*/
+
+.masonry {
+    display: grid;
+    overflow: hidden;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+
+    div {
+        border: 1px solid gray;
+    }
+
+    .photo {
+        background: blue;
+        grid-row-end: span 2;
+    }
+
+    .project {
+        background: gray;
+        grid-row-end: span 3;
+    }
+
+    .blog {
+        background: greenyellow;
+        grid-row-end: span 1;
+    }
+}
