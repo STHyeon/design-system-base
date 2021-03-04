@@ -6,12 +6,18 @@ import 'react-app-polyfill/stable';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Router>
+            <Switch>
+                <Route path="/" exact component={App} />
+                <Redirect path="*" to="/" />
+            </Switch>
+        </Router>
     </React.StrictMode>,
     document.getElementById('root')
 );
