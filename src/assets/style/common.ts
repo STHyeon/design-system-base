@@ -1,38 +1,36 @@
+interface IColor {
+    [colorProp: string]: string; // 인덱스 시그니처 형식
+}
+
+interface ITypo {
+    size: {
+        [typoProp: string]: number;
+    };
+    weight: {
+        [typoProp: string]: number;
+    };
+}
+
 // Global
-export const color = {
-    primary: '#FF4785',
-    secondary: '#1EA7FD',
-    tertiary: '#DDDDDD',
+export const color: IColor = {
+    primary: '#0d6efd',
+    secondary: '#6c757d',
+    info: '#0dcaf0',
 
-    orange: '#FC521F',
-    gold: '#FFAE00',
-    green: '#66BF3C',
-    seafoam: '#37D5D3',
-    purple: '#6F2CAC',
-    ultraviolet: '#2A0481',
+    light: '#FFFFFF',
+    bright: '#f8f9fa',
+    dark: '#212529',
 
-    // Monochrome
-    lightest: '#FFFFFF',
-    lighter: '#F8F8F8',
-    light: '#F3F3F3',
-    mediumlight: '#EEEEEE',
-    medium: '#DDDDDD',
-    mediumdark: '#999999',
-    dark: '#666666',
-    darker: '#444444',
-    darkest: '#333333',
-
-    // Status
-    positive: '#66BF3C',
-    negative: '#FF4400',
-    warning: '#E69D00'
+    success: '#198754',
+    danger: '#dc3545',
+    warning: '#ffc107'
 };
 
-export const typography = {
+export const typography: ITypo = {
     weight: {
-        light: '300',
-        regular: '400',
-        bold: '700'
+        light: 300,
+        regular: 400,
+        bold: 700
     },
     size: {
         small: 12,
