@@ -1,5 +1,4 @@
-import styled from 'styled-components/macro';
-import { ACTIONSIZE, ACTIONCOLOR } from 'assets/utils/Action';
+import styled, { css } from 'styled-components/macro';
 import { color, typography } from 'assets/style/common';
 
 interface StyledProps {
@@ -9,60 +8,28 @@ interface StyledProps {
 }
 
 export const StyledButton = styled.button<StyledProps>`
-    padding: ${(props) => (props.size === ACTIONSIZE.SMALL ? '8px 16px' : '13px 20px')};
+    padding: ${(props) => (props.size === 'small' ? '8px 16px' : '13px 20px')};
     border-radius: 48px;
-    font-weight: ${(props) => (props.weight === ACTIONSIZE.SMALL ? typography.weight.light : typography.weight.regular)};
-    font-size: ${(props) => (props.size === ACTIONSIZE.SMALL ? typography.size.small : typography.size.normal)}px;
+    font-weight: ${(props) => props.weight && typography.weight[`${props.weight}`]};
+    font-size: ${(props) => props.size && typography.size[`${props.size}`] + 'px'};
+    background: ${(props) => (props.appearance ? color[`${props.appearance}`] : '#ffffff')};
 
     ${(props) =>
-        props.appearance === ACTIONCOLOR.PRIMARY &&
-        `
-        background: ${color.primary};
-        color: ${color.lightest};
-    `}
-
+        props.appearance &&
+        css`
+            color: ${color.light};
+        `}
+    
     ${(props) =>
-        props.appearance === ACTIONCOLOR.SECONDARY &&
-        `
-        background: ${color.secondary};
-        color: ${color.lightest};
-    `}
-
-    ${(props) =>
-        props.appearance === ACTIONCOLOR.TERTIARY &&
-        `
-        background: ${color.tertiary};
-        color: ${color.darkest};
-    `}
-
-    ${(props) =>
-        props.appearance === ACTIONCOLOR.OUTLINE &&
-        `
-        border: 1px solid ${color.medium};
-        background: ${color.lightest};
-        color: ${color.dark};
-    `}
-
-    ${(props) =>
-        props.appearance === ACTIONCOLOR.PRIMARY_OUTLINE &&
-        `
-        border: 1px solid ${color.primary};
-        background: ${color.lightest};
-        color: ${color.primary};
-    `}
-
-    ${(props) =>
-        props.appearance === ACTIONCOLOR.SECONDARY_OUTLINE &&
-        `
-        border: 1px solid ${color.secondary};
-        background: ${color.lightest};
-        color: ${color.secondary};
-    `}
+        (props.appearance === 'warning' || props.appearance === 'info' || props.appearance === 'light' || props.appearance === 'bright') &&
+        css`
+            color: ${color.dark};
+        `}
 
     ${(props) =>
         props.disabled &&
-        `
-        cursor: not-allowed !important;
-        opacity: 0.5;
-    `}
+        css`
+            cursor: not-allowed !important;
+            opacity: 0.5;
+        `}
 `;

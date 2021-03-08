@@ -3,6 +3,7 @@ import { color, typography } from 'assets/style/common';
 
 interface StyledProps {
     hideLabel?: boolean;
+    disabled?: boolean;
 }
 
 export const CheckboxWrapper = styled.div`
@@ -10,10 +11,17 @@ export const CheckboxWrapper = styled.div`
     align-items: center;
 `;
 
-export const LabelWrapper = styled.label`
+export const LabelWrapper = styled.label<StyledProps>`
     display: flex;
     align-items: center;
     position: relative;
+
+    ${(props) =>
+        props.disabled &&
+        css`
+            cursor: not-allowed !important;
+            opacity: 0.5;
+        `}
 `;
 
 export const LabelText = styled.span<StyledProps>`
@@ -37,5 +45,7 @@ export const LabelText = styled.span<StyledProps>`
 export const Error = styled.span`
     margin: 0 0 0 6px;
     font-size: ${typography.size.small}px;
-    color: ${color.negative};
+    color: ${color.danger};
 `;
+
+export const CheckboxInput = styled.input``;

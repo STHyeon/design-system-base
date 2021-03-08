@@ -1,22 +1,21 @@
 import React, { FC } from 'react';
 import { Meta } from '@storybook/react';
-
 import { Button, ButtonProps } from './Button';
-import { ACTIONCOLOR, ACTIONBOOLEAN, ACTIONSIZE } from 'assets/utils/Action';
+import { color, typography } from 'assets/style/common';
 
 export default {
     title: 'UI Elements/Button',
     component: Button,
     argTypes: {
         appearance: {
-            defaultValue: ACTIONCOLOR.TERTIARY,
+            defaultValue: 'secondary',
             control: {
                 type: 'select',
-                options: Object.values(ACTIONCOLOR)
+                options: Object.keys(color)
             },
             table: {
-                type: { summary: Object.values(ACTIONCOLOR) },
-                defaultValue: { summary: ACTIONCOLOR.TERTIARY }
+                type: { summary: Object.keys(color) },
+                defaultValue: { summary: 'secondary' }
             }
         },
         children: {
@@ -26,20 +25,31 @@ export default {
             }
         },
         disabled: {
-            defaultValue: ACTIONBOOLEAN.FALSE,
+            defaultValue: false,
             table: {
-                defaultValue: { summary: ACTIONBOOLEAN.FALSE }
+                defaultValue: { summary: false }
+            }
+        },
+        weight: {
+            defaultValue: 'regular',
+            control: {
+                type: 'inline-radio',
+                options: Object.keys(typography.weight)
+            },
+            table: {
+                type: { summary: Object.keys(typography.weight) },
+                defaultValue: { summary: 'regular' }
             }
         },
         size: {
-            defaultValue: ACTIONSIZE.NORMAL,
+            defaultValue: 'normal',
             control: {
                 type: 'inline-radio',
-                options: [ACTIONSIZE.SMALL, ACTIONSIZE.NORMAL]
+                options: Object.keys(typography.size)
             },
             table: {
-                type: { summary: [ACTIONSIZE.SMALL, ACTIONSIZE.NORMAL] },
-                defaultValue: { summary: ACTIONSIZE.NORMAL }
+                type: { summary: Object.keys(typography.size) },
+                defaultValue: { summary: 'normal' }
             }
         }
     }
@@ -54,10 +64,13 @@ export const All: FC = () => (
     <>
         <Button appearance="primary">Primary</Button>
         <Button appearance="secondary">Secondary</Button>
-        <Button appearance="tertiary">Tertiary</Button>
-        <Button appearance="outline">Outline</Button>
-        <Button appearance="primaryOutline">Outline primary</Button>
-        <Button appearance="secondaryOutline">Outline secondary</Button>
+        <Button appearance="success">Success</Button>
+        <Button appearance="danger">Danger</Button>
+        <Button appearance="warning">Warning</Button>
+        <Button appearance="info">Info</Button>
+        <Button appearance="light">Light</Button>
+        <Button appearance="bright">bright</Button>
+        <Button appearance="dark">Dark</Button>
     </>
 );
 
@@ -78,11 +91,8 @@ export const Disabled: FC = () => (
         <Button appearance="secondary" disabled>
             Secondary
         </Button>
-        <Button appearance="tertiary" disabled>
-            Tertiary
-        </Button>
-        <Button appearance="outline" disabled>
-            Outline
+        <Button appearance="success" disabled>
+            success
         </Button>
     </>
 );
