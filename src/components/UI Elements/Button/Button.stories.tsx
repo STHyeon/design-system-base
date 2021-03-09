@@ -7,8 +7,7 @@ export default {
     title: 'UI Elements/Button',
     component: Button,
     argTypes: {
-        appearance: {
-            defaultValue: 'secondary',
+        backgroundColor: {
             control: {
                 type: 'select',
                 options: Object.keys(color)
@@ -16,6 +15,15 @@ export default {
             table: {
                 type: { summary: Object.keys(color) },
                 defaultValue: { summary: 'secondary' }
+            }
+        },
+        borderColor: {
+            control: {
+                type: 'select',
+                options: Object.keys(color)
+            },
+            table: {
+                type: { summary: Object.keys(color) }
             }
         },
         children: {
@@ -62,22 +70,23 @@ Basic.args = {
 
 export const All: FC = () => (
     <>
-        <Button appearance="primary">Primary</Button>
-        <Button appearance="secondary">Secondary</Button>
-        <Button appearance="success">Success</Button>
-        <Button appearance="danger">Danger</Button>
-        <Button appearance="warning">Warning</Button>
-        <Button appearance="info">Info</Button>
-        <Button appearance="light">Light</Button>
-        <Button appearance="bright">bright</Button>
-        <Button appearance="dark">Dark</Button>
+        <Button backgroundColor="primary">Primary</Button>
+        <Button backgroundColor="secondary">Secondary</Button>
+        <Button backgroundColor="success">Success</Button>
+        <Button backgroundColor="danger">Danger</Button>
+        <Button backgroundColor="warning">Warning</Button>
+        <Button backgroundColor="info">Info</Button>
+        <Button backgroundColor="light">Light</Button>
+        <Button backgroundColor="bright">bright</Button>
+        <Button backgroundColor="dark">Dark</Button>
+        <Button borderColor="dark">OutLine</Button>
     </>
 );
 
 export const Size: FC = () => (
     <>
-        <Button appearance="primary">Default</Button>
-        <Button appearance="primary" size="small">
+        <Button backgroundColor="primary">Default</Button>
+        <Button backgroundColor="primary" size="small">
             Small
         </Button>
     </>
@@ -85,13 +94,13 @@ export const Size: FC = () => (
 
 export const Disabled: FC = () => (
     <>
-        <Button appearance="primary" disabled>
+        <Button backgroundColor="primary" disabled>
             Primary
         </Button>
-        <Button appearance="secondary" disabled>
+        <Button backgroundColor="secondary" disabled>
             Secondary
         </Button>
-        <Button appearance="success" disabled>
+        <Button backgroundColor="success" disabled>
             success
         </Button>
     </>

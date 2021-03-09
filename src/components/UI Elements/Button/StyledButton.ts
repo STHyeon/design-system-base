@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components/macro';
 import { color, typography } from 'assets/style/common';
 
 interface StyledProps {
-    appearance?: string;
+    backgroundColor?: string;
+    borderColor?: string;
     weight?: string;
     size?: string;
 }
@@ -12,16 +13,18 @@ export const StyledButton = styled.button<StyledProps>`
     border-radius: 48px;
     font-weight: ${(props) => props.weight && typography.weight[`${props.weight}`]};
     font-size: ${(props) => props.size && typography.size[`${props.size}`] + 'px'};
-    background: ${(props) => (props.appearance ? color[`${props.appearance}`] : '#ffffff')};
+    background: ${(props) => (props.backgroundColor ? color[`${props.backgroundColor}`] : '#ffffff')};
+    border: ${(props) => (props.borderColor ? color[`${props.backgroundColor}`] : '#ffffff')};
+
 
     ${(props) =>
-        props.appearance &&
+        props.backgroundColor &&
         css`
             color: ${color.light};
         `}
     
     ${(props) =>
-        (props.appearance === 'warning' || props.appearance === 'info' || props.appearance === 'light' || props.appearance === 'bright') &&
+        (props.backgroundColor === 'warning' || props.backgroundColor === 'info' || props.backgroundColor === 'light' || props.backgroundColor === 'bright') &&
         css`
             color: ${color.dark};
         `}
@@ -32,4 +35,16 @@ export const StyledButton = styled.button<StyledProps>`
             cursor: not-allowed !important;
             opacity: 0.5;
         `}
+
+    ${(props) => {
+        if (props.borderColor) {
+            const lineColor = color[`${props.borderColor}`];
+
+            return css`
+                border: 1px solid ${lineColor};
+                background: ${color.light};
+                color: ${color.dark};
+            `;
+        }
+    }}
 `;
