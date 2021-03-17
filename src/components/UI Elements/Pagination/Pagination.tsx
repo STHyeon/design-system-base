@@ -19,8 +19,6 @@ export const Pagination: FC<PaginationProps> = ({ postsPerPage, totalPosts, pagi
     const handleDownOffset = () => setOffset(offset - 1);
     const handleActive = (index: number) => setActive(index);
 
-    console.log(totalPosts.length);
-
     return (
         <S.PaginationWrapper index={offset > 0 ? active + 1 : active} {...props}>
             {offset > 0 && (
