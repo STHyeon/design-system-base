@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import * as S from './StyledButton';
-import { color } from 'assets/style/common';
+import { color } from 'assets/styles/common';
 
 type ValueOf<T> = T[keyof T];
 

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import * as S from './StyledText';
-import { typography } from 'assets/style/common';
+import { typography } from 'assets/styles/common';
 
 interface TextProps {
     /** 필수값 x */

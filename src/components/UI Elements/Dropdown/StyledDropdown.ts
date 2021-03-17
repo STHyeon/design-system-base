@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { color } from 'assets/style/common';
+import { color } from 'assets/styles/common';
 import { ListItem, Link } from 'components';
 
 interface StyledProps {

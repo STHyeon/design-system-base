@@ -1,14 +1,28 @@
-import styled from 'styled-components/macro';
-import { ListItem, Link } from 'components';
-import { color } from 'assets/style/common';
+import styled, { css } from 'styled-components/macro';
+import { ListItem } from 'components';
+import { color } from 'assets/styles/common';
 
-export const PaginationWrapper = styled.ul`
+interface StyledProps {
+    active?: boolean;
+    index?: number;
+}
+
+export const PaginationWrapper = styled.ul<StyledProps>`
     display: flex;
+
+    ${(props) =>
+        css`
+            li:nth-child(${props.index ? props.index + 2 : 2}) {
+                span {
+                    margin-left: 0;
+                }
+            }
+        `}
 `;
 
-export const PaginationItem = styled(ListItem)`
+export const PaginationBox = styled(ListItem)<StyledProps>`
     &:first-child {
-        a {
+        span {
             margin-left: 0;
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
@@ -16,14 +30,22 @@ export const PaginationItem = styled(ListItem)`
     }
 
     &:last-child {
-        a {
+        span {
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
         }
     }
+
+    ${(props) =>
+        props.active &&
+        css`
+            span {
+                border-color: ${color.primary};
+            }
+        `}
 `;
 
-export const PaginationLink = styled(Link)`
+export const PaginationItem = styled.span`
     display: block;
     position: relative;
     margin-left: -1px;
@@ -31,6 +53,7 @@ export const PaginationLink = styled(Link)`
     border: 1px solid ${color.bright};
     color: ${color.primary};
     background: ${color.light};
+    cursor: pointer;
 
     &:hover {
         background: ${color.bright};

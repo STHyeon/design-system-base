@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import { ListItem, Link } from 'components';
-import { color } from 'assets/style/common';
+import { color } from 'assets/styles/common';
 
 export const BreadcrumbsWrapper = styled.ol`
     display: flex;

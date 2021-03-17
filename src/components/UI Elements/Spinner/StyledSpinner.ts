@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
-import { color } from 'assets/style/common';
-import { rotate } from 'assets/style/animation';
+import { color } from 'assets/styles/common';
+import { rotate } from 'assets/styles/animation';
 
 export const SpinnerWrapper = styled.div`
     width: 32px;

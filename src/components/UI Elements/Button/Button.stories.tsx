@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Meta } from '@storybook/react';
 import { Button, ButtonProps } from './Button';
-import { color, typography } from 'assets/style/common';
+import { color, typography } from 'assets/styles/common';
 
 export default {
     title: 'UI Elements/Button',

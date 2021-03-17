@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro';
-import { color } from 'assets/style/common';
+import { color } from 'assets/styles/common';
 
 interface StyledProps {
     appearance?: string;

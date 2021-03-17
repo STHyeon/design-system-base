@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro';
-import { color, typography } from 'assets/style/common';
+import { color, typography } from 'assets/styles/common';
 
 interface StyledProps {
     hideLabel?: boolean;
